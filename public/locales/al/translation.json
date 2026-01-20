@@ -8,132 +8,132 @@
   },
   "navigation": {
     "links": {
-      "services": "Services",
-      "aiLab": "AI Lab",
-      "portfolio": "Portfolio",
-      "contact": "Contact"
+      "services": "Shërbimet",
+      "aiLab": "Laboratori AI",
+      "portfolio": "Portofolio",
+      "contact": "Kontakt"
     },
-    "cta": "Let's Talk"
+    "cta": "Le të Flasim"
   },
   "hero": {
     "title": {
-      "lead": "ARCHITECTING",
-      "highlight": "\"intelligence\""
+      "lead": "ARKITEKTUROJMË",
+      "highlight": "\"inteligjencë\""
     },
     "tagline": {
       "symbol": "→",
       "text": "AI • Full-Stack • Enterprise"
     },
-    "subtitle": "Crafting sophisticated AI systems and modern web applications with mathematical precision",
+    "subtitle": "Krijojmë sisteme të sofistikuara AI dhe aplikacione web moderne me saktësi matematikore.",
     "cta": {
-      "primary": "Start a Project",
-      "secondary": "Explore Services"
+      "primary": "Filloni Projektin",
+      "secondary": "Zbuloni Shërbimet"
     }
   },
   "services": {
-    "badge": "What I Do",
-    "title": "Services",
-    "subtitle": "From intelligent AI systems to scalable web applications, I deliver end-to-end solutions that drive real business value.",
+    "badge": "Çfarë ofrojmë",
+    "title": "Shërbimet",
+    "subtitle": "Nga sistemet inteligjente AI deri te aplikacionet web të shkallëzueshme, ne ofrojmë zgjidhje të plota që sjellin vlerë reale për biznesin.",
     "items": {
       "ai": {
-        "title": "AI & Intelligence Services",
-        "description": "Custom AI solutions from conversational agents to complex neural architectures that transform how businesses operate.",
+        "title": "Shërbime AI & Inteligjencë",
+        "description": "Zgjidhje të personalizuara AI, nga agjentët bashkëbisedues deri te arkitekturat komplekse neurale që transformojnë operacionet e biznesit.",
         "features": [
-          "LLM Integration",
-          "Custom Models",
-          "AI Agents",
-          "RAG Systems"
+          "Integrim LLM",
+          "Modele të Personalizuara",
+          "Agjentë AI",
+          "Sisteme RAG"
         ]
       },
       "fullstack": {
-        "title": "Full-Stack Engineering",
-        "description": "Modern web applications built with cutting-edge technologies, optimized for performance and scalability.",
+        "title": "Zhvillime Full-Stack",
+        "description": "Aplikacione web moderne të ndërtuara me teknologji të avancuara, të optimizuara për performancë dhe shkallëzueshmëri.",
         "features": [
           "Next.js/React",
           "Node.js APIs",
-          "Cloud Architecture",
-          "Real-time Systems"
+          "Arkitekturë Cloud",
+          "Sisteme në Kohë Reale"
         ]
       },
       "enterprise": {
-        "title": "Enterprise Systems",
-        "description": "Scalable solutions designed for complex business requirements with enterprise-grade reliability.",
+        "title": "Sisteme Enterprise",
+        "description": "Zgjidhje të shkallëzueshme të dizejnuara për kërkesa komplekse biznesi me besueshmëri të nivelit korporativ.",
         "features": [
-          "System Design",
-          "Automation",
-          "Integration",
+          "Dizajn Sistemi",
+          "Automatizim",
+          "Integrim",
           "Data Pipelines"
         ]
       }
     }
   },
   "aiLab": {
-    "badge": "Capabilities",
-    "title": "The AI Lab",
-    "subtitle": "Explore cutting-edge AI capabilities through interactive demonstrations. These represent core technologies I implement for clients.",
+    "badge": "Aftësitë",
+    "title": "Laboratori AI",
+    "subtitle": "Eksploroni aftësitë e avancuara të AI përmes demonstrimeve interaktive. Këto përfaqësojnë teknologjitë kryesore që implementojmë për klientët.",
     "demos": {
       "chatbot": {
-        "title": "Conversational AI",
-        "description": "Intelligent chatbots powered by LLMs with context awareness, memory, and tool integration.",
+        "title": "AI Bashkëbisedues",
+        "description": "Chatbot inteligjentë të fuqizuar nga LLM-të me ndërgjegjësim kontekstual, memorie dhe integrim mjetesh.",
         "tags": [
           "LangChain",
           "RAG",
-          "Memory"
+          "Memorie"
         ]
       },
       "extraction": {
-        "title": "Data Extraction",
-        "description": "Transform unstructured documents into clean, structured JSON data with high accuracy.",
+        "title": "Nxjerrje e Të Dhënave",
+        "description": "Transformoni dokumente të pastrukturuara në të dhëna të pastra me saktësi të lartë.",
         "tags": [
           "OCR",
           "NLP",
-          "Schema"
+          "Skema"
         ]
       },
       "automation": {
-        "title": "Workflow Automation",
-        "description": "AI-powered decision engines that automate complex business processes and workflows.",
+        "title": "Automatizim i Punës",
+        "description": "Motorë vendimmarrës të fuqizuar nga AI që automatizojnë procese komplekse biznesi.",
         "tags": [
-          "Agents",
-          "Tools",
-          "Orchestration"
+          "Agjentë",
+          "Mjete",
+          "Orkestrim"
         ]
       }
     },
     "chatbot": {
       "messages": {
-        "user": "Analyze Q3 report",
-        "aiProcessing": "Processing 47 pages...",
-        "aiRevenue": "Revenue up 23%"
+        "user": "Analizo raportin e T3",
+        "aiProcessing": "Duke procesuar 47 faqe...",
+        "aiRevenue": "Të ardhurat u rritën me 23%"
       }
     },
     "extraction": {
       "json": {
-        "line1": "\"data\": [...],",
-        "line2": "\"status\": \"ok\""
+        "line1": "\"të_dhëna\": [...],",
+        "line2": "\"statusi\": \"ok\""
       }
     },
     "cta": {
-      "prompt": "Want to see these in action?",
-      "button": "Request a Demo"
+      "prompt": "Doni t'i shihni në veprim?",
+      "button": "Kërkoni një Demo"
     }
   },
   "portfolio": {
-    "badge": "My Work",
-    "title": "Portfolio",
-    "subtitle": "A selection of projects showcasing my expertise in AI, full-stack development, and enterprise systems.",
+    "badge": "Puna Jonë",
+    "title": "Portofolio",
+    "subtitle": "Një përzgjedhje projektesh që shfaqin ekspertizën tonë në AI, zhvillim full-stack dhe sisteme enterprise.",
     "filters": {
-      "all": "All",
+      "all": "Të Gjitha",
       "ai": "AI",
       "fullStack": "Full-Stack",
       "enterprise": "Enterprise"
     },
-    "featured": "Featured",
-    "viewAll": "View All Projects",
+    "featured": "Në Evidencë",
+    "viewAll": "Shiko Të Gjitha Projektet",
     "projects": {
       "rag-chatbot": {
         "title": "Enterprise RAG Chatbot",
-        "description": "Production chatbot with retrieval-augmented generation for a Fortune 500 company. Handles 10k+ queries daily with 95% satisfaction rate.",
+        "description": "Chatbot produksioni me RAG (Retrieval-Augmented Generation) për një kompani Fortune 500. Trajton 10k+ kërkesa në ditë me 95% kënaqësi.",
         "tags": [
           "LangChain",
           "OpenAI",
@@ -142,8 +142,8 @@
         ]
       },
       "saas-platform": {
-        "title": "AI-Powered SaaS Platform",
-        "description": "Full-stack platform enabling businesses to create custom AI workflows without code. 5k+ active users.",
+        "title": "Platformë SaaS me AI",
+        "description": "Platformë full-stack që u mundëson bizneseve të krijojnë rrjedha pune AI të personalizuara pa kod. 5k+ përdorues aktivë.",
         "tags": [
           "Next.js",
           "TypeScript",
@@ -152,8 +152,8 @@
         ]
       },
       "data-pipeline": {
-        "title": "Real-time Data Pipeline",
-        "description": "Enterprise data orchestration system processing 1M+ events per hour with 99.99% uptime.",
+        "title": "Data Pipeline në Kohë Reale",
+        "description": "Sistem orkestrimi të dhënash enterprise që proceson 1M+ evente në orë me 99.99% uptime.",
         "tags": [
           "Kafka",
           "Python",
@@ -162,8 +162,8 @@
         ]
       },
       "document-ai": {
-        "title": "Document Intelligence",
-        "description": "AI system for automated document processing, classification, and data extraction with 99% accuracy.",
+        "title": "Inteligjencë Dokumentesh",
+        "description": "Sistem AI për procesimin e automatizuar të dokumenteve, klasifikimin dhe nxjerrjen e të dhënave me saktësi 99%.",
         "tags": [
           "PyTorch",
           "Anthropic",
@@ -172,8 +172,8 @@
         ]
       },
       "analytics-dashboard": {
-        "title": "Analytics Dashboard",
-        "description": "Real-time analytics platform with custom visualization components and predictive insights.",
+        "title": "Panel Analitik",
+        "description": "Platformë analitike në kohë reale me komponentë vizualizimi të personalizuar dhe njohuri parashikuese.",
         "tags": [
           "React",
           "D3.js",
@@ -182,8 +182,8 @@
         ]
       },
       "integration-hub": {
-        "title": "Integration Hub",
-        "description": "Enterprise integration platform connecting 50+ services with intelligent routing and monitoring.",
+        "title": "Qendër Integrimi",
+        "description": "Platformë integrimi enterprise që lidh 50+ shërbime me rrugëzim inteligjent dhe monitorim.",
         "tags": [
           "Node.js",
           "GraphQL",
@@ -194,9 +194,9 @@
     }
   },
   "contact": {
-    "badge": "Get in Touch",
-    "title": "Let's Work Together",
-    "subtitle": "Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing.",
+    "badge": "Na Kontaktoni",
+    "title": "Le të Bashkëpunojmë",
+    "subtitle": "Keni një projekt në mendje? Do të dëshironim ta dëgjonim. Na dërgoni një mesazh dhe le të krijojmë diçka të mrekullueshme së bashku.",
     "links": {
       "email": {
         "label": "Email",
@@ -204,55 +204,55 @@
       },
       "linkedin": {
         "label": "LinkedIn",
-        "value": "Connect with me"
+        "value": "Lidhuni me ne"
       },
       "calendly": {
         "label": "Calendly",
-        "value": "Book a call"
+        "value": "Rezervoni një telefonatë"
       }
     },
     "form": {
       "success": {
-        "title": "Message Sent!",
-        "body": "Thanks for reaching out. I'll get back to you soon.",
-        "cta": "Send Another Message"
+        "title": "Mesazhi u Dërgua!",
+        "body": "Faleminderit që na kontaktuat. Do t'ju kthejmë përgjigje së shpejti.",
+        "cta": "Dërgo Një Mesazh Tjetër"
       },
       "labels": {
-        "name": "Name *",
+        "name": "Emri *",
         "email": "Email *",
-        "company": "Company (Optional)",
-        "message": "Message *"
+        "company": "Kompania (Opsionale)",
+        "message": "Mesazhi *"
       },
       "placeholders": {
-        "name": "John Doe",
-        "email": "john@company.com",
-        "company": "Your Company",
-        "message": "Tell me about your project..."
+        "name": "Emri Juaj",
+        "email": "emri@kompania.com",
+        "company": "Kompania Juaj",
+        "message": "Na tregoni rreth projektit tuaj..."
       },
       "errors": {
-        "name": "Name must be at least 2 characters",
-        "email": "Please enter a valid email address",
-        "message": "Message must be at least 10 characters",
-        "submit": "Something went wrong. Please try again."
+        "name": "Emri duhet të ketë të paktën 2 karaktere",
+        "email": "Ju lutemi shkruani një email të vlefshëm",
+        "message": "Mesazhi duhet të ketë të paktën 10 karaktere",
+        "submit": "Diçka shkoi keq. Ju lutemi provoni përsëri."
       },
-      "submit": "Send Message"
+      "submit": "Dërgo Mesazhin"
     },
     "direct": {
-      "title": "Direct Contact",
-      "subtitle": "Prefer to reach out directly? Choose your preferred method below."
+      "title": "Kontakt i Drejtpërdrejtë",
+      "subtitle": "Preferoni të kontaktoni direkt? Zgjidhni metodën tuaj të preferuar më poshtë."
     },
     "availability": {
-      "title": "Available for new projects",
-      "subtitle": "Currently accepting projects starting from February 2025."
+      "title": "Të disponueshëm për projekte të reja",
+      "subtitle": "Aktualisht duke pranuar projekte duke filluar nga Shkurti 2025."
     }
   },
   "footer": {
-    "copyright": "© {{year}} DRAMA. All rights reserved.",
+    "copyright": "© {{year}} DRAMA. Të gjitha të drejtat e rezervuara.",
     "location": {
-      "prefix": "Based in",
-      "country": "Albania",
-      "suffix": ", working globally.",
-      "secondary": "Crafting intelligent solutions across time zones."
+      "prefix": "Me bazë në",
+      "country": "Shqipëri",
+      "suffix": ", duke punuar globalisht.",
+      "secondary": "Duke krijuar zgjidhje inteligjente nëpër zona të ndryshme kohore."
     },
     "social": {
       "github": "GitHub",
@@ -260,12 +260,12 @@
       "twitter": "Twitter"
     },
     "madeWith": {
-      "prefix": "Designed & built with",
-      "highlight": "precision",
-      "suffix": "using React, Three.js & GSAP"
+      "prefix": "Dizenjuar & ndërtuar me",
+      "highlight": "saktësi",
+      "suffix": "duke përdorur React, Three.js & GSAP"
     }
   },
   "errors": {
-    "rootMissing": "Could not find root element to mount to"
+    "rootMissing": "Nuk u gjet elementi rrënjë (root) për montim"
   }
 }

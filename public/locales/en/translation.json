@@ -31,9 +31,9 @@
     }
   },
   "services": {
-    "badge": "What I Do",
+    "badge": "What We Do",
     "title": "Services",
-    "subtitle": "From intelligent AI systems to scalable web applications, I deliver end-to-end solutions that drive real business value.",
+    "subtitle": "From intelligent AI systems to scalable web applications, we deliver end-to-end solutions that drive real business value.",
     "items": {
       "ai": {
         "title": "AI & Intelligence Services",
@@ -70,7 +70,7 @@
   "aiLab": {
     "badge": "Capabilities",
     "title": "The AI Lab",
-    "subtitle": "Explore cutting-edge AI capabilities through interactive demonstrations. These represent core technologies I implement for clients.",
+    "subtitle": "Explore cutting-edge AI capabilities through interactive demonstrations. These represent core technologies we implement for clients.",
     "demos": {
       "chatbot": {
         "title": "Conversational AI",
@@ -119,9 +119,9 @@
     }
   },
   "portfolio": {
-    "badge": "My Work",
+    "badge": "Our Work",
     "title": "Portfolio",
-    "subtitle": "A selection of projects showcasing my expertise in AI, full-stack development, and enterprise systems.",
+    "subtitle": "A selection of projects showcasing our expertise in AI, full-stack development, and enterprise systems.",
     "filters": {
       "all": "All",
       "ai": "AI",
@@ -196,7 +196,7 @@
   "contact": {
     "badge": "Get in Touch",
     "title": "Let's Work Together",
-    "subtitle": "Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing.",
+    "subtitle": "Have a project in mind? We'd love to hear about it. Send us a message and let's create something amazing together.",
     "links": {
       "email": {
         "label": "Email",
@@ -204,7 +204,7 @@
       },
       "linkedin": {
         "label": "LinkedIn",
-        "value": "Connect with me"
+        "value": "Connect with us"
       },
       "calendly": {
         "label": "Calendly",
@@ -214,7 +214,7 @@
     "form": {
       "success": {
         "title": "Message Sent!",
-        "body": "Thanks for reaching out. I'll get back to you soon.",
+        "body": "Thanks for reaching out. We'll get back to you soon.",
         "cta": "Send Another Message"
       },
       "labels": {
@@ -227,7 +227,7 @@
         "name": "John Doe",
         "email": "john@company.com",
         "company": "Your Company",
-        "message": "Tell me about your project..."
+        "message": "Tell us about your project..."
       },
       "errors": {
         "name": "Name must be at least 2 characters",
