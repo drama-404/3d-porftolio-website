@@ -25,7 +25,7 @@ export const basePalette = {
   darker: '#0a0a0f',      // Deep obsidian - main page background
   dark: '#12121a',        // Secondary background - cards, navigation
   base: '#1a1a24',        // Elevated surfaces - glass cards
-  light: '#2a2a3a',       // Lighter surface - borders, subtle elements
+  light: '#525268',       // Lighter surface - borders, subtle elements
 
   // Accent colors (neon theme)
   cyan: '#00f5d4',        // Primary accent - CTAs, highlights, links

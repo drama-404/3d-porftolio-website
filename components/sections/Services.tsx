@@ -185,7 +185,7 @@ const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
 
 export const Services: React.FC = () => {
   return (
-    <section id="services" className="relative py-32 px-6 sm:px-12 md:px-16 lg:px-24">
+    <section id="services" className="relative py-16 sm:py-20 md:py-24 lg:py-26 px-6 sm:px-12 md:px-16 lg:px-24">
       <div className="max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
