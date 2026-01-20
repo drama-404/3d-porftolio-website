@@ -7,6 +7,7 @@ interface GlassCardProps {
   hover?: boolean;
   padding?: 'none' | 'sm' | 'md' | 'lg';
   onClick?: () => void;
+  contrastOnHover?: boolean;
 }
 
 export const GlassCard: React.FC<GlassCardProps> = ({
@@ -16,6 +17,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
   hover = true,
   padding = 'md',
   onClick,
+  contrastOnHover = false,
 }) => {
   const paddingStyles = {
     none: '',
@@ -35,12 +37,17 @@ export const GlassCard: React.FC<GlassCardProps> = ({
     ? `transition-all duration-300 hover:-translate-y-1 ${glowHoverStyles[glowColor]}`
     : '';
 
+  const contrastStyles = contrastOnHover
+    ? 'hover:bg-base-darker/90 hover:backdrop-blur-xl'
+    : '';
+
   return (
     <div
       className={`
         glass-card rounded-2xl
         ${paddingStyles[padding]}
         ${hoverStyles}
+        ${contrastStyles}
         ${onClick ? 'cursor-pointer' : ''}
         ${className}
       `}

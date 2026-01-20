@@ -156,6 +156,7 @@ const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
       glowColor={service.color}
       padding="none"
       className="overflow-hidden group"
+      contrastOnHover
     >
       <ServiceVisual service={service} />
 

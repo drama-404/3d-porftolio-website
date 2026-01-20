@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageSquare, FileText, GitBranch } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 import { Badge } from '../ui/Badge';
+import { aiLabColors } from '../../config/colors';
 
 interface Demo {
   id: string;
@@ -111,19 +112,19 @@ const WorkflowAnimation: React.FC = () => {
     <div className="flex items-center justify-center p-4">
       <svg width="200" height="80" viewBox="0 0 200 80">
         {/* Nodes */}
-        <circle cx="30" cy="40" r="12" fill="none" stroke="#f72585" strokeWidth="2" className="animate-pulse" />
-        <circle cx="100" cy="20" r="10" fill="none" stroke="#f72585" strokeWidth="1.5" opacity="0.7" />
-        <circle cx="100" cy="60" r="10" fill="none" stroke="#f72585" strokeWidth="1.5" opacity="0.7" />
-        <circle cx="170" cy="40" r="12" fill="none" stroke="#f72585" strokeWidth="2" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
+        <circle cx="30" cy="40" r="12" fill="none" stroke={aiLabColors.workflow} strokeWidth="2" className="animate-pulse" />
+        <circle cx="100" cy="20" r="10" fill="none" stroke={aiLabColors.workflow} strokeWidth="1.5" opacity="0.7" />
+        <circle cx="100" cy="60" r="10" fill="none" stroke={aiLabColors.workflow} strokeWidth="1.5" opacity="0.7" />
+        <circle cx="170" cy="40" r="12" fill="none" stroke={aiLabColors.workflow} strokeWidth="2" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
 
         {/* Connections */}
-        <path d="M 42 35 L 90 22" stroke="#f72585" strokeWidth="1" opacity="0.5" />
-        <path d="M 42 45 L 90 58" stroke="#f72585" strokeWidth="1" opacity="0.5" />
-        <path d="M 110 22 L 158 35" stroke="#f72585" strokeWidth="1" opacity="0.5" />
-        <path d="M 110 58 L 158 45" stroke="#f72585" strokeWidth="1" opacity="0.5" />
+        <path d="M 42 35 L 90 22" stroke={aiLabColors.workflow} strokeWidth="1" opacity="0.5" />
+        <path d="M 42 45 L 90 58" stroke={aiLabColors.workflow} strokeWidth="1" opacity="0.5" />
+        <path d="M 110 22 L 158 35" stroke={aiLabColors.workflow} strokeWidth="1" opacity="0.5" />
+        <path d="M 110 58 L 158 45" stroke={aiLabColors.workflow} strokeWidth="1" opacity="0.5" />
 
         {/* Animated particle */}
-        <circle r="3" fill="#f72585">
+        <circle r="3" fill={aiLabColors.workflow}>
           <animateMotion dur="3s" repeatCount="indefinite" path="M 30 40 L 100 20 L 170 40" />
         </circle>
       </svg>

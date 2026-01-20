@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CubeProps } from '../types';
 import { createIconTexture } from '../utils/textures';
+import { sceneColors, cubeColors } from '../config/colors';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +71,7 @@ const WireframeShape: React.FC<{ position: [number, number, number], rotation?: 
     return (
         <group ref={groupRef} position={position} rotation={new THREE.Euler(...rotation)} scale={scale}>
             <mesh ref={ref} geometry={geometry}>
-                <meshBasicMaterial color="#00f5d4" wireframe transparent opacity={0.15} />
+                <meshBasicMaterial color={sceneColors.wireframe.color} wireframe transparent opacity={sceneColors.wireframe.opacity} />
             </mesh>
         </group>
     )
@@ -92,7 +93,7 @@ const Cube: React.FC<CubeProps & { innerRef?: React.Ref<THREE.Group>, onPointerD
   
   const textureMap = useMemo(() => {
     if (!iconType) return null;
-    const url = createIconTexture(iconType, type === 'solid' && color === '#1A1A1A' ? '#FFFFFF' : '#1A1A1A');
+    const url = createIconTexture(iconType, type === 'solid' && color === cubeColors.icons.onLightBg ? cubeColors.icons.onDarkBg : cubeColors.icons.onLightBg);
     const tex = new THREE.TextureLoader().load(url);
     tex.anisotropy = 16;
     return tex;
@@ -172,13 +173,13 @@ const HeroFloatingCubes = () => {
     return (
         <group ref={groupRef}>
             <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
-                <Cube position={pos1} color="#00f5d4" scale={0.6} rotation={[0.5, 0.5, 0]} />
+                <Cube position={pos1} color={cubeColors.floating.cube1} scale={0.6} rotation={[0.5, 0.5, 0]} />
             </Float>
             <Float speed={1.2} rotationIntensity={0.4} floatIntensity={0.4}>
-                <Cube position={pos2} color="#7b2cbf" scale={0.5} iconType="link" rotation={[-0.2, 0.4, 0.2]} />
+                <Cube position={pos2} color={cubeColors.floating.cube2} scale={0.5} iconType="link" rotation={[-0.2, 0.4, 0.2]} />
             </Float>
              <Float speed={1.3} rotationIntensity={0.6} floatIntensity={0.4}>
-                <Cube position={pos3} color="#f72585" scale={0.4} iconType="wifi" rotation={[0.1, -0.2, 0.1]} />
+                <Cube position={pos3} color={cubeColors.floating.cube3} scale={0.4} iconType="wifi" rotation={[0.1, -0.2, 0.1]} />
             </Float>
         </group>
     )
@@ -207,7 +208,7 @@ const RubiksCube = () => {
         const top = [], mid = [], bot = [];
         const gap = 1.05;
         // Neon color palette - cyan, magenta, violet with dark tones
-        const colors = ['#00f5d4', '#f72585', '#7b2cbf', '#1a1a24', '#2a2a3a', '#f8f9fa'];
+        const colors = cubeColors.faces;
 
         for (let x = -1; x <= 1; x++) {
             for (let y = -1; y <= 1; y++) {
@@ -622,12 +623,12 @@ const ThreeScene: React.FC = () => {
     <div className="absolute inset-0 z-0 pointer-events-auto">
       <Canvas shadows dpr={[1, 2]}>
         <PerspectiveCamera makeDefault position={[0, 0, 12]} fov={35} />
-        <color attach="background" args={['#0a0a0f']} />
+        <color attach="background" args={[sceneColors.canvasBackground]} />
         
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 10, 7]} intensity={1.2} castShadow />
-        <directionalLight position={[-5, 5, -2]} intensity={0.8} color="#00f5d4" />
-        <spotLight position={[0, 5, -10]} intensity={0.4} color="#f72585" />
+        <directionalLight position={[-5, 5, -2]} intensity={0.8} color={sceneColors.lights.directionalAccent} />
+        <spotLight position={[0, 5, -10]} intensity={0.4} color={sceneColors.lights.spotlightAccent} />
 
         <RubiksCube />
         <HeroFloatingCubes />
