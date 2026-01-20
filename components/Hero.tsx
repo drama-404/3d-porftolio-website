@@ -1,15 +1,6 @@
 import React from 'react';
-import { ArrowUpRight, Menu } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import ThreeScene from './ThreeScene';
-
-const Logo = () => (
-  <div className="flex items-center gap-2 font-semibold text-text-primary z-50 pointer-events-auto select-none">
-    <div className="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-accent-cyan to-accent-violet rounded-[4px] flex items-center justify-center">
-        <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-base-darker rounded-full"></div>
-    </div>
-    <span className="tracking-tight text-base md:text-lg font-display">DRAMA</span>
-  </div>
-);
 
 const DecorativeBackground = () => (
   <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-30" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
@@ -46,7 +37,7 @@ const TryForFreeBrackets = () => (
     </div>
 )
 
-// Glassmorphism Spec Label for dark theme
+// Glassmorphism Spec Label for dark theme - kept for potential future use
 const SpecLabel = ({ label, value, sub, align = 'left' }: { label: string, value: string, sub: string, align?: 'left' | 'right' }) => (
     <div className={`flex flex-col ${align === 'right' ? 'items-end text-right' : 'items-start text-left'} group relative z-10`}>
         {/* Glassmorphism Backing */}
@@ -82,28 +73,19 @@ const Hero: React.FC = () => {
 
             {/* --- SECTION 1: HERO --- */}
             <div id="hero-section" className="relative flex flex-col min-h-[100dvh] w-full pointer-events-none px-6 sm:px-12 md:px-16 lg:px-24 pb-10">
-                <nav className="flex justify-between items-center py-6 md:py-10 pointer-events-auto">
-                  <div className="flex items-center gap-6 md:gap-12">
-                    <Menu className="w-8 h-8 md:w-10 md:h-10 text-text-primary stroke-[1.5] cursor-pointer hover:text-accent-cyan transition-colors" />
-                    <Logo />
-                  </div>
-                  <div className="flex gap-4 md:gap-8 text-[10px] md:text-xs font-mono text-text-muted tracking-widest uppercase hidden sm:flex">
-                    <span className="hover:text-accent-cyan transition-colors cursor-pointer">services</span>
-                    <span className="hover:text-accent-cyan transition-colors cursor-pointer">portfolio</span>
-                  </div>
-                </nav>
+                {/* Nav removed - using Navigation component from App.tsx */}
 
                 <main className="flex-1 flex flex-col justify-center max-w-4xl pointer-events-auto mt-8 md:mt-0">
-                  <div className="mb-6 md:mb-8 flex items-center gap-3 text-accent-cyan font-medium text-xs md:text-base font-mono">
-                    <span className="font-bold text-accent-magenta">→</span>
-                    <span>AI Engineer & Full-Stack Developer</span>
-                  </div>
                   <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[7.5rem] leading-[1.1] md:leading-[0.95] font-display font-bold text-text-primary tracking-[-0.03em] mb-8 md:mb-12 break-words">
                     <span className="gradient-text">ARCHITECTING</span> <br className="hidden md:block" />
                     <div className="flex flex-wrap items-center gap-2 md:gap-4 mt-2">
                         <span className="relative font-display italic font-bold text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] text-text-primary">"intelligence"</span>
                     </div>
                   </h1>
+                  <div className="mb-6 md:mb-8 flex items-center gap-3 text-accent-cyan font-medium text-xs md:text-base font-mono">
+                    <span className="font-bold text-accent-magenta">→</span>
+                    <span>AI • Full-Stack • Enterprise</span>
+                  </div>
                   <p className="text-text-secondary text-sm md:text-lg leading-relaxed mb-10 md:mb-16 max-w-[280px] sm:max-w-md font-normal">
                     Crafting sophisticated AI systems and modern web applications with mathematical precision
                   </p>
@@ -120,122 +102,6 @@ const Hero: React.FC = () => {
                     </button>
                   </div>
                 </main>
-                <div className="absolute bottom-6 md:bottom-10 left-6 md:left-20 text-text-muted text-xs md:text-sm font-mono tracking-wide hidden md:block">
-                    AI • Full-Stack • Enterprise
-                </div>
-            </div>
-
-            {/* --- SECTION 2: DETAILS --- */}
-            <div id="details-section" className="relative w-full min-h-[100dvh] flex flex-col items-center justify-start pt-20 md:pt-32 pointer-events-none px-6 sm:px-12 md:px-16">
-                <div className="flex flex-col items-center text-center space-y-8 pointer-events-auto glass-card p-6 sm:p-8 rounded-3xl max-w-4xl mx-auto z-20">
-                    <div className="inline-flex items-center gap-2 text-accent-cyan font-mono uppercase tracking-widest text-xs">
-                        <div className="w-2 h-2 rounded-full bg-accent-cyan animate-pulse"></div>
-                        <span>Problem Solving</span>
-                    </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-text-primary leading-tight">
-                        <span className="gradient-text">Break it down.</span> <br/>
-                        <span className="font-normal text-2xl sm:text-3xl md:text-5xl text-text-secondary">Analyze every bit.</span>
-                    </h2>
-                    <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed max-w-md mx-auto">
-                        Watch as complex challenges align perfectly. Turning chaos into elegant solutions with AI-powered precision.
-                    </p>
-                </div>
-                {/* Spacer for 3D animation visibility */}
-                <div className="flex-1 w-full min-h-[50vh]"></div>
-            </div>
-
-            {/* --- SECTION 3: DECONSTRUCTED VIEW (HUD Style) --- */}
-            <div id="breakdown-section" className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center pointer-events-none overflow-hidden py-10 px-6 sm:px-12 md:px-16">
-                 <div className="absolute top-10 md:top-24 left-0 w-full text-center z-10 pointer-events-auto px-6">
-                    <div className="inline-block relative">
-                         <h3 className="relative text-2xl md:text-5xl font-display font-bold gradient-text mb-2 md:mb-4">System Architecture</h3>
-                    </div>
-                    <div className="inline-block px-3 py-1 rounded-full border border-accent-cyan/20 bg-base-dark/40 backdrop-blur-md">
-                        <span className="text-[10px] md:text-xs font-mono tracking-[0.2em] uppercase text-accent-cyan">Schematic v2.0</span>
-                    </div>
-                 </div>
-
-                 <div className="max-w-[1400px] w-full h-full relative flex flex-col md:flex-row items-center justify-between z-10 mt-20 md:mt-0 mx-auto">
-
-                    {/* Mobile: Top Grid Layout */}
-                    <div className="md:hidden grid grid-cols-2 gap-x-8 gap-y-8 w-full mb-8 pointer-events-auto">
-                         <SpecLabel label="Latency" value="< 100ms" sub="Real-time AI responses." align="left" />
-                         <SpecLabel label="Accuracy" value="99.2%" sub="Production-grade models." align="right" />
-                    </div>
-
-                    {/* Desktop: Left Column */}
-                    <div className="hidden md:flex flex-col gap-24 pointer-events-auto">
-                        <SpecLabel label="Latency" value="< 100ms" sub="Real-time AI response times." align="left" />
-                        <SpecLabel label="Accuracy" value="99.2%" sub="Production-grade model precision." align="left" />
-                    </div>
-
-                    {/* Center area reserved for 3D Explosion */}
-                    <div className="w-full h-[40vh] md:h-auto md:flex-1"></div>
-
-                     {/* Mobile: Bottom Grid Layout */}
-                    <div className="md:hidden grid grid-cols-2 gap-x-8 gap-y-8 w-full mt-8 pointer-events-auto">
-                         <SpecLabel label="Scale" value="∞" sub="Cloud-native architecture." align="left" />
-                         <SpecLabel label="Uptime" value="99.99%" sub="Enterprise reliability." align="right" />
-                    </div>
-
-                    {/* Desktop: Right Column */}
-                    <div className="hidden md:flex flex-col gap-24 text-right pointer-events-auto">
-                        <SpecLabel label="Scale" value="∞" sub="Cloud-native elastic scaling." align="right" />
-                        <SpecLabel label="Uptime" value="99.99%" sub="Enterprise-grade reliability." align="right" />
-                    </div>
-                 </div>
-            </div>
-
-            {/* --- SECTION 4: FOOTER (MAGNETIC PORTAL) --- */}
-            <div id="footer-section" className="relative w-full min-h-[90dvh] flex flex-col items-center justify-center py-20 pointer-events-none overflow-hidden px-6 sm:px-12 md:px-16">
-
-                <div className="relative z-20 flex flex-col items-center justify-center w-full pointer-events-none text-center">
-                    <span className="text-xs md:text-sm font-mono uppercase tracking-[0.3em] text-accent-cyan mb-8 pointer-events-auto">Final Output</span>
-
-                    <div className="flex flex-col items-center mb-24 md:mb-32 pointer-events-auto relative z-10">
-                        <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-bold gradient-text leading-none tracking-tight">
-                            Order from
-                        </h2>
-                        <span className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-bold text-text-primary leading-none tracking-tight -mt-2 md:-mt-4 relative block">
-                            Chaos.
-                        </span>
-                    </div>
-
-                    <div className="relative group cursor-pointer w-full max-w-xs sm:max-w-sm mx-auto pointer-events-auto z-20">
-                       {/* High Tech Button Interface */}
-                       <div className="relative overflow-hidden rounded-2xl glass-card transition-all duration-300 group-hover:border-accent-cyan/30 group-hover:shadow-glow">
-                            <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent-cyan to-accent-violet group-hover:from-accent-cyan group-hover:to-accent-magenta transition-colors"></div>
-                            <button className="w-full px-6 sm:px-8 py-4 sm:py-6 flex items-center justify-between text-text-primary">
-                                <div className="flex flex-col items-start text-left">
-                                    <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-text-muted mb-1">Initialize System</span>
-                                    <span className="text-xl sm:text-2xl font-display font-semibold tracking-tight">Get Started</span>
-                                </div>
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-accent-cyan to-accent-violet text-base-darker flex items-center justify-center group-hover:rotate-45 transition-transform duration-500 shadow-lg">
-                                    <ArrowUpRight size={20} strokeWidth={1.5} />
-                                </div>
-                            </button>
-
-                            {/* Animated Tech Lines */}
-                            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent-cyan/30 to-transparent group-hover:via-accent-cyan transition-all"></div>
-                            <div className="absolute top-0 right-0 w-[1px] h-full bg-gradient-to-b from-transparent via-accent-violet/20 to-transparent"></div>
-                       </div>
-
-                       {/* Sub-label */}
-                       <div className="absolute -bottom-8 left-0 w-full flex justify-between text-[10px] font-mono text-text-muted uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                            <span>v2.0.4 Ready</span>
-                            <span className="text-accent-cyan">Secure Connection</span>
-                       </div>
-                    </div>
-                </div>
-
-                <div className="absolute bottom-10 w-full px-6 md:px-10 flex justify-between items-end pointer-events-auto text-text-secondary">
-                     <div className="hidden md:block">
-                         <Logo />
-                     </div>
-                     <p className="text-[10px] md:text-xs font-mono w-full md:w-auto text-center md:text-left text-text-muted">
-                        DESIGNED FOR<br/><span className="text-accent-cyan">PRECISION</span>
-                     </p>
-                </div>
             </div>
 
         </div>

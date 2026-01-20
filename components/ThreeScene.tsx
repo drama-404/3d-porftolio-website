@@ -251,15 +251,14 @@ const RubiksCube = () => {
         idleTimeline.current?.play();
 
         const st = ScrollTrigger.create({
-            trigger: "#details-section",
-            start: "center center", 
+            trigger: "#services",
+            start: "center center",
             onEnter: () => {
                  // Stop rotation when entering the breakdown phase
                  idleTimeline.current?.pause();
-                 // Resetting rotations happens in the breakdown timeline
             },
             onLeaveBack: () => {
-                 // Resume when going back up to details/hero
+                 // Resume when going back up
                  idleTimeline.current?.play();
             }
         });
@@ -425,22 +424,21 @@ const RubiksCube = () => {
               .to(botSliceRef.current!.rotation, { y: 0, duration: t }, "<");
 
 
-            // 3. Scroll to Details
+            // 3. Scroll to Services (was Details)
             const centerPosDetails: [number,number,number] = isMobile ? [0, 0.5, 0] : [0, -2.5, 0];
             const detailScale = isMobile ? 0.6 : 0.9;
 
             const tl1 = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#hero-section",
-                    start: "top top", 
-                    endTrigger: "#details-section",
+                    start: "top top",
+                    endTrigger: "#services",
                     end: "center center",
                     scrub: 1.2,
-                    immediateRender: false, 
+                    immediateRender: false,
                 }
             });
-            
-            // NOTE: REMOVED slice rotation resets here to allow idle animation to continue through Section 2
+
             tl1.to(mainGroupRef.current!.rotation, {
                 x: 0.2, y: Math.PI * 0.25, z: 0, duration: 1, ease: "power2.inOut"
             }, 0)
@@ -451,22 +449,22 @@ const RubiksCube = () => {
                 x: detailScale, y: detailScale, z: detailScale, ease: "power1.inOut"
             }, 0);
 
-            // 4. Scroll to Breakdown
+            // 4. Scroll to Portfolio (was Breakdown) - Explosion
             const centerPosBreakdown = [0, 0, 0];
             const breakdownScale = isMobile ? 0.55 : 0.8;
 
             const tl2 = gsap.timeline({
                 scrollTrigger: {
-                    trigger: "#details-section",
+                    trigger: "#services",
                     start: "bottom bottom",
-                    endTrigger: "#breakdown-section",
+                    endTrigger: "#portfolio",
                     end: "center center",
                     scrub: 1,
                 }
             });
 
             // FIRST: Reset Slices to flat before exploding
-            tl2.to([topSliceRef.current!.rotation, midSliceRef.current!.rotation, botSliceRef.current!.rotation], { 
+            tl2.to([topSliceRef.current!.rotation, midSliceRef.current!.rotation, botSliceRef.current!.rotation], {
                 x: 0, y: 0, z: 0, duration: 0.3, ease: "power2.inOut"
             }, 0);
 
@@ -479,32 +477,30 @@ const RubiksCube = () => {
                  ease: "power2.inOut"
             }, 0)
             .to(mainGroupRef.current!.rotation, {
-                x: 0.5, y: Math.PI * 2.25, z: 0.2, 
+                x: 0.5, y: Math.PI * 2.25, z: 0.2,
                 ease: "power2.inOut"
             }, 0);
 
             cubesRefs.current.forEach((mesh) => {
                 if(!mesh) return;
-                const parentY = 
-                    slices.top.find(c => c.id === mesh.userData.id) ? 1.05 : 
+                const parentY =
+                    slices.top.find(c => c.id === mesh.userData.id) ? 1.05 :
                     slices.bot.find(c => c.id === mesh.userData.id) ? -1.05 : 0;
-                
-                const direction = new THREE.Vector3(mesh.position.x, parentY, mesh.position.z).normalize();
-                if (direction.length() === 0) direction.set(0,1,0); 
 
-                // Reduce horizontal spread to avoid overlapping side text in Section 3
-                const safeSpread = Math.min(3.0, screenWidth * 0.25); 
+                const direction = new THREE.Vector3(mesh.position.x, parentY, mesh.position.z).normalize();
+                if (direction.length() === 0) direction.set(0,1,0);
+
+                const safeSpread = Math.min(3.0, screenWidth * 0.25);
                 const explodeDist = safeSpread + Math.random() * 2;
-                
-                // Bias towards vertical explosion (Y) and depth (Z) rather than width (X)
-                const targetX = mesh.position.x + direction.x * (explodeDist * 0.7); 
-                const targetY = mesh.position.y + (direction.y * explodeDist) - parentY; 
+
+                const targetX = mesh.position.x + direction.x * (explodeDist * 0.7);
+                const targetY = mesh.position.y + (direction.y * explodeDist) - parentY;
                 const targetZ = mesh.position.z + direction.z * explodeDist;
 
                 tl2.to(mesh.position, {
                     x: targetX, y: targetY, z: targetZ, ease: "power2.out"
                 }, 0);
-                
+
                 tl2.to(mesh.rotation, {
                     x: Math.random() * Math.PI * 2,
                     y: Math.random() * Math.PI * 2,
@@ -513,12 +509,12 @@ const RubiksCube = () => {
                 }, 0);
             });
 
-            // 5. Physics Drop
+            // 5. Physics Drop (to Footer)
             const tl3 = gsap.timeline({
                 scrollTrigger: {
-                    trigger: "#breakdown-section",
-                    start: "center center", 
-                    endTrigger: "#footer-section",
+                    trigger: "#portfolio",
+                    start: "center center",
+                    endTrigger: "footer",
                     end: "bottom bottom",
                     scrub: 1.5,
                     onLeave: () => { physics.current.active = true; },
@@ -528,13 +524,13 @@ const RubiksCube = () => {
 
              cubesRefs.current.forEach((mesh, i) => {
                 if (!mesh) return;
-                
+
                 const dropRange = Math.max(2, screenWidth * 0.8);
-                const dropTargetX = (Math.random() - 0.5) * dropRange; 
-                const dropTargetZ = (Math.random() - 0.5) * 10; 
-                const dropTargetY = PHYSICS_FLOOR_Y + Math.random() * 1.5; 
-                 const parentYOffset = 
-                    slices.top.find(c => c.id === mesh.userData.id) ? 1.05 : 
+                const dropTargetX = (Math.random() - 0.5) * dropRange;
+                const dropTargetZ = (Math.random() - 0.5) * 10;
+                const dropTargetY = PHYSICS_FLOOR_Y + Math.random() * 1.5;
+                 const parentYOffset =
+                    slices.top.find(c => c.id === mesh.userData.id) ? 1.05 :
                     slices.bot.find(c => c.id === mesh.userData.id) ? -1.05 : 0;
 
                 const finalLocalY = dropTargetY - parentYOffset;
@@ -542,8 +538,8 @@ const RubiksCube = () => {
 
                 tl3.to(mesh.position, {
                     x: dropTargetX, y: finalLocalY, z: dropTargetZ,
-                    ease: "bounce.out", duration: 2, 
-                }, i * 0.01); 
+                    ease: "bounce.out", duration: 2,
+                }, i * 0.01);
                 tl3.to(mesh.rotation, {
                     x: randRot, y: randRot, z: randRot, ease: "power1.out"
                 }, "<");
