@@ -3,6 +3,7 @@ import { MessageSquare, FileText, GitBranch } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 import { Badge } from '../ui/Badge';
 import { aiLabColors } from '../../config/colors';
+import { useTranslation } from 'react-i18next';
 
 interface Demo {
   id: string;
@@ -13,39 +14,13 @@ interface Demo {
   tags: string[];
 }
 
-const demos: Demo[] = [
-  {
-    id: 'chatbot',
-    title: 'Conversational AI',
-    description: 'Intelligent chatbots powered by LLMs with context awareness, memory, and tool integration.',
-    icon: <MessageSquare className="w-6 h-6" />,
-    color: 'cyan',
-    tags: ['LangChain', 'RAG', 'Memory'],
-  },
-  {
-    id: 'extraction',
-    title: 'Data Extraction',
-    description: 'Transform unstructured documents into clean, structured JSON data with high accuracy.',
-    icon: <FileText className="w-6 h-6" />,
-    color: 'violet',
-    tags: ['OCR', 'NLP', 'Schema'],
-  },
-  {
-    id: 'automation',
-    title: 'Workflow Automation',
-    description: 'AI-powered decision engines that automate complex business processes and workflows.',
-    icon: <GitBranch className="w-6 h-6" />,
-    color: 'magenta',
-    tags: ['Agents', 'Tools', 'Orchestration'],
-  },
-];
-
 // Animated chatbot conversation
 const ChatbotAnimation: React.FC = () => {
+  const { t } = useTranslation();
   const messages = [
-    { type: 'user', text: 'Analyze Q3 report' },
-    { type: 'ai', text: 'Processing 47 pages...' },
-    { type: 'ai', text: 'Revenue up 23%' },
+    { type: 'user', text: t('aiLab.chatbot.messages.user') },
+    { type: 'ai', text: t('aiLab.chatbot.messages.aiProcessing') },
+    { type: 'ai', text: t('aiLab.chatbot.messages.aiRevenue') },
   ];
 
   return (
@@ -78,6 +53,8 @@ const ChatbotAnimation: React.FC = () => {
 
 // Animated data extraction
 const ExtractionAnimation: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex items-center justify-center gap-3 p-4">
       {/* Document */}
@@ -98,8 +75,8 @@ const ExtractionAnimation: React.FC = () => {
       {/* JSON Output */}
       <div className="px-2 py-1.5 rounded bg-base-light/30 border border-accent-violet/30 font-mono text-[8px] text-accent-violet">
         <div>{`{`}</div>
-        <div className="pl-2">{`"data": [...],`}</div>
-        <div className="pl-2">{`"status": "ok"`}</div>
+        <div className="pl-2">{t('aiLab.extraction.json.line1')}</div>
+        <div className="pl-2">{t('aiLab.extraction.json.line2')}</div>
         <div>{`}`}</div>
       </div>
     </div>
@@ -180,19 +157,52 @@ const DemoCard: React.FC<{ demo: Demo }> = ({ demo }) => {
 };
 
 export const AILab: React.FC = () => {
+  const { t } = useTranslation();
+  const getTags = (key: string) => {
+    const value = t(key, { returnObjects: true });
+    return Array.isArray(value) ? value : [];
+  };
+
+  const demos: Demo[] = [
+    {
+      id: 'chatbot',
+      title: t('aiLab.demos.chatbot.title'),
+      description: t('aiLab.demos.chatbot.description'),
+      icon: <MessageSquare className="w-6 h-6" />,
+      color: 'cyan',
+      tags: getTags('aiLab.demos.chatbot.tags'),
+    },
+    {
+      id: 'extraction',
+      title: t('aiLab.demos.extraction.title'),
+      description: t('aiLab.demos.extraction.description'),
+      icon: <FileText className="w-6 h-6" />,
+      color: 'violet',
+      tags: getTags('aiLab.demos.extraction.tags'),
+    },
+    {
+      id: 'automation',
+      title: t('aiLab.demos.automation.title'),
+      description: t('aiLab.demos.automation.description'),
+      icon: <GitBranch className="w-6 h-6" />,
+      color: 'magenta',
+      tags: getTags('aiLab.demos.automation.tags'),
+    },
+  ];
+
   return (
     <section id="ai-lab" className="relative py-16 sm:py-20 md:py-24 lg:py-26 px-6 sm:px-12 md:px-16 lg:px-24 bg-gradient-to-b from-base-darker to-base-dark">
       <div className="max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge variant="magenta" dot animated className="mb-6">
-            Capabilities
+            {t('aiLab.badge')}
           </Badge>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-6">
-            <span className="gradient-text">The AI Lab</span>
+            <span className="gradient-text">{t('aiLab.title')}</span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            Explore cutting-edge AI capabilities through interactive demonstrations. These represent core technologies I implement for clients.
+            {t('aiLab.subtitle')}
           </p>
         </div>
 
@@ -206,10 +216,10 @@ export const AILab: React.FC = () => {
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
           <p className="text-text-muted text-sm font-mono mb-4">
-            Want to see these in action?
+            {t('aiLab.cta.prompt')}
           </p>
           <button className="px-6 py-3 rounded-full border border-accent-cyan/50 text-accent-cyan hover:bg-accent-cyan/10 transition-all duration-300 font-medium">
-            Request a Demo
+            {t('aiLab.cta.button')}
           </button>
         </div>
       </div>

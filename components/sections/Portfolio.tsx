@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 import { TechBadge, Badge } from '../ui/Badge';
+import { useTranslation } from 'react-i18next';
 
 type Category = 'All' | 'AI' | 'Full-Stack' | 'Enterprise';
 
 interface Project {
   id: string;
-  title: string;
-  description: string;
   category: 'AI' | 'Full-Stack' | 'Enterprise';
-  tags: string[];
   gradient: string;
   featured?: boolean;
 }
@@ -18,59 +16,45 @@ interface Project {
 const projects: Project[] = [
   {
     id: 'rag-chatbot',
-    title: 'Enterprise RAG Chatbot',
-    description: 'Production chatbot with retrieval-augmented generation for a Fortune 500 company. Handles 10k+ queries daily with 95% satisfaction rate.',
     category: 'AI',
-    tags: ['LangChain', 'OpenAI', 'Pinecone', 'FastAPI'],
     gradient: 'from-accent-cyan via-accent-cyan/50 to-base-dark',
     featured: true,
   },
   {
     id: 'saas-platform',
-    title: 'AI-Powered SaaS Platform',
-    description: 'Full-stack platform enabling businesses to create custom AI workflows without code. 5k+ active users.',
     category: 'Full-Stack',
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
     gradient: 'from-accent-violet via-accent-violet/50 to-base-dark',
     featured: true,
   },
   {
     id: 'data-pipeline',
-    title: 'Real-time Data Pipeline',
-    description: 'Enterprise data orchestration system processing 1M+ events per hour with 99.99% uptime.',
     category: 'Enterprise',
-    tags: ['Kafka', 'Python', 'Kubernetes', 'AWS'],
     gradient: 'from-accent-magenta via-accent-magenta/50 to-base-dark',
   },
   {
     id: 'document-ai',
-    title: 'Document Intelligence',
-    description: 'AI system for automated document processing, classification, and data extraction with 99% accuracy.',
     category: 'AI',
-    tags: ['PyTorch', 'Anthropic', 'FastAPI', 'Redis'],
     gradient: 'from-accent-cyan/80 via-accent-violet/50 to-base-dark',
   },
   {
     id: 'analytics-dashboard',
-    title: 'Analytics Dashboard',
-    description: 'Real-time analytics platform with custom visualization components and predictive insights.',
     category: 'Full-Stack',
-    tags: ['React', 'D3.js', 'Node.js', 'MongoDB'],
     gradient: 'from-accent-violet/80 via-accent-magenta/50 to-base-dark',
   },
   {
     id: 'integration-hub',
-    title: 'Integration Hub',
-    description: 'Enterprise integration platform connecting 50+ services with intelligent routing and monitoring.',
     category: 'Enterprise',
-    tags: ['Node.js', 'GraphQL', 'Docker', 'Terraform'],
     gradient: 'from-accent-magenta/80 via-accent-cyan/50 to-base-dark',
   },
 ];
 
 const categories: Category[] = ['All', 'AI', 'Full-Stack', 'Enterprise'];
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+const ProjectCard: React.FC<{ project: Project; categoryLabel: string }> = ({ project, categoryLabel }) => {
+  const { t } = useTranslation();
+  const tagsValue = t(`portfolio.projects.${project.id}.tags`, { returnObjects: true });
+  const tags = Array.isArray(tagsValue) ? tagsValue : [];
+
   return (
     <GlassCard
       padding="none"
@@ -96,7 +80,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               project.category === 'Full-Stack' ? 'violet' : 'magenta'
             }
           >
-            {project.category}
+            {categoryLabel}
           </Badge>
         </div>
 
@@ -113,7 +97,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         {/* Featured badge */}
         {project.featured && (
           <div className="absolute top-4 right-4">
-            <Badge variant="outline" size="sm">Featured</Badge>
+            <Badge variant="outline" size="sm">{t('portfolio.featured')}</Badge>
           </div>
         )}
       </div>
@@ -121,13 +105,13 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       {/* Content */}
       <div className="p-5">
         <h3 className="text-lg font-display font-semibold text-text-primary mb-2 group-hover:text-accent-cyan transition-colors">
-          {project.title}
+          {t(`portfolio.projects.${project.id}.title`)}
         </h3>
         <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-2">
-          {project.description}
+          {t(`portfolio.projects.${project.id}.description`)}
         </p>
         <div className="flex flex-wrap gap-1.5">
-          {project.tags.slice(0, 4).map((tag) => (
+          {tags.slice(0, 4).map((tag) => (
             <TechBadge key={tag} tech={tag} />
           ))}
         </div>
@@ -138,9 +122,10 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const FilterButton: React.FC<{
   category: Category;
+  label: string;
   active: boolean;
   onClick: () => void;
-}> = ({ category, active, onClick }) => (
+}> = ({ label, active, onClick }) => (
   <button
     onClick={onClick}
     className={`
@@ -152,12 +137,20 @@ const FilterButton: React.FC<{
       }
     `}
   >
-    {category}
+    {label}
   </button>
 );
 
 export const Portfolio: React.FC = () => {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<Category>('All');
+
+  const categoryLabels: Record<Category, string> = {
+    All: t('portfolio.filters.all'),
+    AI: t('portfolio.filters.ai'),
+    'Full-Stack': t('portfolio.filters.fullStack'),
+    Enterprise: t('portfolio.filters.enterprise'),
+  };
 
   const filteredProjects = filter === 'All'
     ? projects
@@ -169,13 +162,13 @@ export const Portfolio: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <Badge variant="violet" dot animated className="mb-6">
-            My Work
+            {t('portfolio.badge')}
           </Badge>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-6">
-            <span className="gradient-text">Portfolio</span>
+            <span className="gradient-text">{t('portfolio.title')}</span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            A selection of projects showcasing my expertise in AI, full-stack development, and enterprise systems.
+            {t('portfolio.subtitle')}
           </p>
         </div>
 
@@ -185,6 +178,7 @@ export const Portfolio: React.FC = () => {
             <FilterButton
               key={category}
               category={category}
+              label={categoryLabels[category]}
               active={filter === category}
               onClick={() => setFilter(category)}
             />
@@ -194,14 +188,14 @@ export const Portfolio: React.FC = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard key={project.id} project={project} categoryLabel={categoryLabels[project.category]} />
           ))}
         </div>
 
         {/* View More */}
         <div className="mt-12 text-center">
           <button className="px-6 py-3 rounded-full border border-white/20 text-text-secondary hover:text-text-primary hover:border-white/40 transition-all duration-300 font-medium">
-            View All Projects
+            {t('portfolio.viewAll')}
           </button>
         </div>
       </div>

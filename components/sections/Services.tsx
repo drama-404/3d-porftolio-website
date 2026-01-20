@@ -2,6 +2,7 @@ import React from 'react';
 import { Brain, Code2, Building2 } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 import { Badge } from '../ui/Badge';
+import { useTranslation } from 'react-i18next';
 
 interface Service {
   id: string;
@@ -11,33 +12,6 @@ interface Service {
   color: 'cyan' | 'violet' | 'magenta';
   features: string[];
 }
-
-const services: Service[] = [
-  {
-    id: 'ai',
-    title: 'AI & Intelligence Services',
-    description: 'Custom AI solutions from conversational agents to complex neural architectures that transform how businesses operate.',
-    icon: <Brain className="w-8 h-8" />,
-    color: 'cyan',
-    features: ['LLM Integration', 'Custom Models', 'AI Agents', 'RAG Systems'],
-  },
-  {
-    id: 'fullstack',
-    title: 'Full-Stack Engineering',
-    description: 'Modern web applications built with cutting-edge technologies, optimized for performance and scalability.',
-    icon: <Code2 className="w-8 h-8" />,
-    color: 'violet',
-    features: ['Next.js/React', 'Node.js APIs', 'Cloud Architecture', 'Real-time Systems'],
-  },
-  {
-    id: 'enterprise',
-    title: 'Enterprise Systems',
-    description: 'Scalable solutions designed for complex business requirements with enterprise-grade reliability.',
-    icon: <Building2 className="w-8 h-8" />,
-    color: 'magenta',
-    features: ['System Design', 'Automation', 'Integration', 'Data Pipelines'],
-  },
-];
 
 // Animated visual for each service card
 const ServiceVisual: React.FC<{ service: Service }> = ({ service }) => {
@@ -184,19 +158,52 @@ const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
 };
 
 export const Services: React.FC = () => {
+  const { t } = useTranslation();
+  const getFeatures = (key: string) => {
+    const value = t(key, { returnObjects: true });
+    return Array.isArray(value) ? value : [];
+  };
+
+  const services: Service[] = [
+    {
+      id: 'ai',
+      title: t('services.items.ai.title'),
+      description: t('services.items.ai.description'),
+      icon: <Brain className="w-8 h-8" />,
+      color: 'cyan',
+      features: getFeatures('services.items.ai.features'),
+    },
+    {
+      id: 'fullstack',
+      title: t('services.items.fullstack.title'),
+      description: t('services.items.fullstack.description'),
+      icon: <Code2 className="w-8 h-8" />,
+      color: 'violet',
+      features: getFeatures('services.items.fullstack.features'),
+    },
+    {
+      id: 'enterprise',
+      title: t('services.items.enterprise.title'),
+      description: t('services.items.enterprise.description'),
+      icon: <Building2 className="w-8 h-8" />,
+      color: 'magenta',
+      features: getFeatures('services.items.enterprise.features'),
+    },
+  ];
+
   return (
     <section id="services" className="relative py-16 sm:py-20 md:py-24 lg:py-26 px-6 sm:px-12 md:px-16 lg:px-24">
       <div className="max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge variant="cyan" dot animated className="mb-6">
-            What I Do
+            {t('services.badge')}
           </Badge>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-6">
-            <span className="gradient-text">Services</span>
+            <span className="gradient-text">{t('services.title')}</span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            From intelligent AI systems to scalable web applications, I deliver end-to-end solutions that drive real business value.
+            {t('services.subtitle')}
           </p>
         </div>
 

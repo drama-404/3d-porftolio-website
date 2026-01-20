@@ -1,23 +1,28 @@
 import React from 'react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const socialLinks = [
-  { icon: <Github size={20} />, href: 'https://github.com/', label: 'GitHub' },
-  { icon: <Linkedin size={20} />, href: 'https://linkedin.com/in/', label: 'LinkedIn' },
-  { icon: <Twitter size={20} />, href: 'https://twitter.com/', label: 'Twitter' },
-];
+const Logo = () => {
+  const { t } = useTranslation();
 
-const Logo = () => (
-  <div className="flex items-center gap-2 font-semibold text-text-primary">
-    <div className="w-5 h-5 bg-gradient-to-br from-accent-cyan to-accent-violet rounded-[4px] flex items-center justify-center">
-      <div className="w-2 h-2 bg-base-darker rounded-full"></div>
+  return (
+    <div className="flex items-center gap-2 font-semibold text-text-primary">
+      <div className="w-5 h-5 bg-gradient-to-br from-accent-cyan to-accent-violet rounded-[4px] flex items-center justify-center">
+        <div className="w-2 h-2 bg-base-darker rounded-full"></div>
+      </div>
+      <span className="tracking-tight text-base font-display">{t('brand.name')}</span>
     </div>
-    <span className="tracking-tight text-base font-display">DRAMA</span>
-  </div>
-);
+  );
+};
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+  const socialLinks = [
+    { icon: <Github size={20} />, href: 'https://github.com/', label: t('footer.social.github') },
+    { icon: <Linkedin size={20} />, href: 'https://linkedin.com/in/', label: t('footer.social.linkedin') },
+    { icon: <Twitter size={20} />, href: 'https://twitter.com/', label: t('footer.social.twitter') },
+  ];
 
   return (
     <footer className="relative py-12 px-6 sm:px-12 md:px-16 lg:px-24 border-t border-white/5">
@@ -27,17 +32,19 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-start gap-4">
             <Logo />
             <p className="text-text-muted text-sm">
-              &copy; {currentYear} DRAMA. All rights reserved.
+              {t('footer.copyright', { year: currentYear })}
             </p>
           </div>
 
           {/* Location */}
           <div className="text-center">
             <p className="text-text-secondary text-sm">
-              Based in <span className="text-accent-cyan">Albania</span>, working globally.
+              {t('footer.location.prefix')}{' '}
+              <span className="text-accent-cyan">{t('footer.location.country')}</span>
+              {t('footer.location.suffix')}
             </p>
             <p className="text-text-muted text-xs mt-1">
-              Crafting intelligent solutions across time zones.
+              {t('footer.location.secondary')}
             </p>
           </div>
 
@@ -70,9 +77,9 @@ export const Footer: React.FC = () => {
         {/* Made with */}
         <div className="mt-6 text-center">
           <p className="text-text-muted text-xs font-mono">
-            Designed & built with{' '}
-            <span className="text-accent-magenta">precision</span>
-            {' '}using React, Three.js & GSAP
+            {t('footer.madeWith.prefix')}{' '}
+            <span className="text-accent-magenta">{t('footer.madeWith.highlight')}</span>{' '}
+            {t('footer.madeWith.suffix')}
           </p>
         </div>
       </div>

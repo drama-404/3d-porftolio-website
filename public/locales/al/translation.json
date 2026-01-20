@@ -1,0 +1,271 @@
+{
+  "brand": {
+    "name": "DRAMA"
+  },
+  "language": {
+    "en": "EN",
+    "al": "AL"
+  },
+  "navigation": {
+    "links": {
+      "services": "Services",
+      "aiLab": "AI Lab",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "cta": "Let's Talk"
+  },
+  "hero": {
+    "title": {
+      "lead": "ARCHITECTING",
+      "highlight": "\"intelligence\""
+    },
+    "tagline": {
+      "symbol": "→",
+      "text": "AI • Full-Stack • Enterprise"
+    },
+    "subtitle": "Crafting sophisticated AI systems and modern web applications with mathematical precision",
+    "cta": {
+      "primary": "Start a Project",
+      "secondary": "Explore Services"
+    }
+  },
+  "services": {
+    "badge": "What I Do",
+    "title": "Services",
+    "subtitle": "From intelligent AI systems to scalable web applications, I deliver end-to-end solutions that drive real business value.",
+    "items": {
+      "ai": {
+        "title": "AI & Intelligence Services",
+        "description": "Custom AI solutions from conversational agents to complex neural architectures that transform how businesses operate.",
+        "features": [
+          "LLM Integration",
+          "Custom Models",
+          "AI Agents",
+          "RAG Systems"
+        ]
+      },
+      "fullstack": {
+        "title": "Full-Stack Engineering",
+        "description": "Modern web applications built with cutting-edge technologies, optimized for performance and scalability.",
+        "features": [
+          "Next.js/React",
+          "Node.js APIs",
+          "Cloud Architecture",
+          "Real-time Systems"
+        ]
+      },
+      "enterprise": {
+        "title": "Enterprise Systems",
+        "description": "Scalable solutions designed for complex business requirements with enterprise-grade reliability.",
+        "features": [
+          "System Design",
+          "Automation",
+          "Integration",
+          "Data Pipelines"
+        ]
+      }
+    }
+  },
+  "aiLab": {
+    "badge": "Capabilities",
+    "title": "The AI Lab",
+    "subtitle": "Explore cutting-edge AI capabilities through interactive demonstrations. These represent core technologies I implement for clients.",
+    "demos": {
+      "chatbot": {
+        "title": "Conversational AI",
+        "description": "Intelligent chatbots powered by LLMs with context awareness, memory, and tool integration.",
+        "tags": [
+          "LangChain",
+          "RAG",
+          "Memory"
+        ]
+      },
+      "extraction": {
+        "title": "Data Extraction",
+        "description": "Transform unstructured documents into clean, structured JSON data with high accuracy.",
+        "tags": [
+          "OCR",
+          "NLP",
+          "Schema"
+        ]
+      },
+      "automation": {
+        "title": "Workflow Automation",
+        "description": "AI-powered decision engines that automate complex business processes and workflows.",
+        "tags": [
+          "Agents",
+          "Tools",
+          "Orchestration"
+        ]
+      }
+    },
+    "chatbot": {
+      "messages": {
+        "user": "Analyze Q3 report",
+        "aiProcessing": "Processing 47 pages...",
+        "aiRevenue": "Revenue up 23%"
+      }
+    },
+    "extraction": {
+      "json": {
+        "line1": "\"data\": [...],",
+        "line2": "\"status\": \"ok\""
+      }
+    },
+    "cta": {
+      "prompt": "Want to see these in action?",
+      "button": "Request a Demo"
+    }
+  },
+  "portfolio": {
+    "badge": "My Work",
+    "title": "Portfolio",
+    "subtitle": "A selection of projects showcasing my expertise in AI, full-stack development, and enterprise systems.",
+    "filters": {
+      "all": "All",
+      "ai": "AI",
+      "fullStack": "Full-Stack",
+      "enterprise": "Enterprise"
+    },
+    "featured": "Featured",
+    "viewAll": "View All Projects",
+    "projects": {
+      "rag-chatbot": {
+        "title": "Enterprise RAG Chatbot",
+        "description": "Production chatbot with retrieval-augmented generation for a Fortune 500 company. Handles 10k+ queries daily with 95% satisfaction rate.",
+        "tags": [
+          "LangChain",
+          "OpenAI",
+          "Pinecone",
+          "FastAPI"
+        ]
+      },
+      "saas-platform": {
+        "title": "AI-Powered SaaS Platform",
+        "description": "Full-stack platform enabling businesses to create custom AI workflows without code. 5k+ active users.",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Stripe"
+        ]
+      },
+      "data-pipeline": {
+        "title": "Real-time Data Pipeline",
+        "description": "Enterprise data orchestration system processing 1M+ events per hour with 99.99% uptime.",
+        "tags": [
+          "Kafka",
+          "Python",
+          "Kubernetes",
+          "AWS"
+        ]
+      },
+      "document-ai": {
+        "title": "Document Intelligence",
+        "description": "AI system for automated document processing, classification, and data extraction with 99% accuracy.",
+        "tags": [
+          "PyTorch",
+          "Anthropic",
+          "FastAPI",
+          "Redis"
+        ]
+      },
+      "analytics-dashboard": {
+        "title": "Analytics Dashboard",
+        "description": "Real-time analytics platform with custom visualization components and predictive insights.",
+        "tags": [
+          "React",
+          "D3.js",
+          "Node.js",
+          "MongoDB"
+        ]
+      },
+      "integration-hub": {
+        "title": "Integration Hub",
+        "description": "Enterprise integration platform connecting 50+ services with intelligent routing and monitoring.",
+        "tags": [
+          "Node.js",
+          "GraphQL",
+          "Docker",
+          "Terraform"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing.",
+    "links": {
+      "email": {
+        "label": "Email",
+        "value": "hello@drama.dev"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Connect with me"
+      },
+      "calendly": {
+        "label": "Calendly",
+        "value": "Book a call"
+      }
+    },
+    "form": {
+      "success": {
+        "title": "Message Sent!",
+        "body": "Thanks for reaching out. I'll get back to you soon.",
+        "cta": "Send Another Message"
+      },
+      "labels": {
+        "name": "Name *",
+        "email": "Email *",
+        "company": "Company (Optional)",
+        "message": "Message *"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@company.com",
+        "company": "Your Company",
+        "message": "Tell me about your project..."
+      },
+      "errors": {
+        "name": "Name must be at least 2 characters",
+        "email": "Please enter a valid email address",
+        "message": "Message must be at least 10 characters",
+        "submit": "Something went wrong. Please try again."
+      },
+      "submit": "Send Message"
+    },
+    "direct": {
+      "title": "Direct Contact",
+      "subtitle": "Prefer to reach out directly? Choose your preferred method below."
+    },
+    "availability": {
+      "title": "Available for new projects",
+      "subtitle": "Currently accepting projects starting from February 2025."
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} DRAMA. All rights reserved.",
+    "location": {
+      "prefix": "Based in",
+      "country": "Albania",
+      "suffix": ", working globally.",
+      "secondary": "Crafting intelligent solutions across time zones."
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    },
+    "madeWith": {
+      "prefix": "Designed & built with",
+      "highlight": "precision",
+      "suffix": "using React, Three.js & GSAP"
+    }
+  },
+  "errors": {
+    "rootMissing": "Could not find root element to mount to"
+  }
+}

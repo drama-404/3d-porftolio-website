@@ -3,6 +3,7 @@ import { Mail, Linkedin, Calendar, Send, CheckCircle, AlertCircle } from 'lucide
 import { GlassCard, AccentGlassCard } from '../ui/GlassCard';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
+import { useTranslation } from 'react-i18next';
 
 interface FormData {
   name: string;
@@ -18,30 +19,6 @@ interface FormErrors {
 }
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
-
-const contactLinks = [
-  {
-    icon: <Mail className="w-5 h-5" />,
-    label: 'Email',
-    value: 'hello@drama.dev',
-    href: 'mailto:hello@drama.dev',
-    color: 'cyan',
-  },
-  {
-    icon: <Linkedin className="w-5 h-5" />,
-    label: 'LinkedIn',
-    value: 'Connect with me',
-    href: 'https://linkedin.com/in/',
-    color: 'violet',
-  },
-  {
-    icon: <Calendar className="w-5 h-5" />,
-    label: 'Calendly',
-    value: 'Book a call',
-    href: 'https://calendly.com/',
-    color: 'magenta',
-  },
-];
 
 const ContactLink: React.FC<{
   icon: React.ReactNode;
@@ -82,6 +59,7 @@ const ContactLink: React.FC<{
 };
 
 export const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -91,20 +69,44 @@ export const Contact: React.FC = () => {
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<FormStatus>('idle');
 
+  const contactLinks = [
+    {
+      icon: <Mail className="w-5 h-5" />,
+      label: t('contact.links.email.label'),
+      value: t('contact.links.email.value'),
+      href: 'mailto:hello@drama.dev',
+      color: 'cyan',
+    },
+    {
+      icon: <Linkedin className="w-5 h-5" />,
+      label: t('contact.links.linkedin.label'),
+      value: t('contact.links.linkedin.value'),
+      href: 'https://linkedin.com/in/',
+      color: 'violet',
+    },
+    {
+      icon: <Calendar className="w-5 h-5" />,
+      label: t('contact.links.calendly.label'),
+      value: t('contact.links.calendly.value'),
+      href: 'https://calendly.com/',
+      color: 'magenta',
+    },
+  ];
+
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
     if (!formData.name.trim() || formData.name.length < 2) {
-      newErrors.name = 'Name must be at least 2 characters';
+      newErrors.name = t('contact.form.errors.name');
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = t('contact.form.errors.email');
     }
 
     if (!formData.message.trim() || formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
+      newErrors.message = t('contact.form.errors.message');
     }
 
     setErrors(newErrors);
@@ -153,13 +155,13 @@ export const Contact: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge variant="cyan" dot animated className="mb-6">
-            Get in Touch
+            {t('contact.badge')}
           </Badge>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-6">
-            <span className="gradient-text">Let's Work Together</span>
+            <span className="gradient-text">{t('contact.title')}</span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -172,26 +174,26 @@ export const Contact: React.FC = () => {
                   <div className="w-16 h-16 rounded-full bg-accent-cyan/20 flex items-center justify-center mb-6">
                     <CheckCircle className="w-8 h-8 text-accent-cyan" />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-text-primary mb-2">Message Sent!</h3>
-                  <p className="text-text-secondary mb-6">Thanks for reaching out. I'll get back to you soon.</p>
+                  <h3 className="text-2xl font-display font-bold text-text-primary mb-2">{t('contact.form.success.title')}</h3>
+                  <p className="text-text-secondary mb-6">{t('contact.form.success.body')}</p>
                   <Button
                     variant="outline"
                     onClick={() => setStatus('idle')}
                   >
-                    Send Another Message
+                    {t('contact.form.success.cta')}
                   </Button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-text-secondary text-sm mb-2">Name *</label>
+                      <label className="block text-text-secondary text-sm mb-2">{t('contact.form.labels.name')}</label>
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="John Doe"
+                        placeholder={t('contact.form.placeholders.name')}
                         className={`${inputBaseStyles} ${errors.name ? errorStyles : ''}`}
                       />
                       {errors.name && (
@@ -201,13 +203,13 @@ export const Contact: React.FC = () => {
                       )}
                     </div>
                     <div>
-                      <label className="block text-text-secondary text-sm mb-2">Email *</label>
+                      <label className="block text-text-secondary text-sm mb-2">{t('contact.form.labels.email')}</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="john@company.com"
+                        placeholder={t('contact.form.placeholders.email')}
                         className={`${inputBaseStyles} ${errors.email ? errorStyles : ''}`}
                       />
                       {errors.email && (
@@ -219,24 +221,24 @@ export const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-text-secondary text-sm mb-2">Company (Optional)</label>
+                    <label className="block text-text-secondary text-sm mb-2">{t('contact.form.labels.company')}</label>
                     <input
                       type="text"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      placeholder="Your Company"
+                      placeholder={t('contact.form.placeholders.company')}
                       className={inputBaseStyles}
                     />
                   </div>
 
                   <div>
-                    <label className="block text-text-secondary text-sm mb-2">Message *</label>
+                    <label className="block text-text-secondary text-sm mb-2">{t('contact.form.labels.message')}</label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell me about your project..."
+                      placeholder={t('contact.form.placeholders.message')}
                       rows={5}
                       className={`${inputBaseStyles} resize-none ${errors.message ? errorStyles : ''}`}
                     />
@@ -250,7 +252,7 @@ export const Contact: React.FC = () => {
                   {status === 'error' && (
                     <div className="p-4 rounded-xl bg-accent-magenta/10 border border-accent-magenta/30 text-accent-magenta text-sm flex items-center gap-2">
                       <AlertCircle size={16} />
-                      Something went wrong. Please try again.
+                      {t('contact.form.errors.submit')}
                     </div>
                   )}
 
@@ -263,7 +265,7 @@ export const Contact: React.FC = () => {
                     icon={<Send size={18} />}
                     className="w-full"
                   >
-                    Send Message
+                    {t('contact.form.submit')}
                   </Button>
                 </form>
               )}
@@ -274,10 +276,10 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-2 space-y-4">
             <AccentGlassCard accentColor="gradient" padding="md">
               <h3 className="text-lg font-display font-semibold text-text-primary mb-2">
-                Direct Contact
+                {t('contact.direct.title')}
               </h3>
               <p className="text-text-secondary text-sm mb-6">
-                Prefer to reach out directly? Choose your preferred method below.
+                {t('contact.direct.subtitle')}
               </p>
               <div className="space-y-3">
                 {contactLinks.map((link) => (
@@ -290,9 +292,9 @@ export const Contact: React.FC = () => {
               <div className="flex items-start gap-4">
                 <div className="w-3 h-3 rounded-full bg-accent-cyan mt-1.5 animate-pulse" />
                 <div>
-                  <p className="text-text-primary font-medium mb-1">Available for new projects</p>
+                  <p className="text-text-primary font-medium mb-1">{t('contact.availability.title')}</p>
                   <p className="text-text-secondary text-sm">
-                    Currently accepting projects starting from February 2025.
+                    {t('contact.availability.subtitle')}
                   </p>
                 </div>
               </div>

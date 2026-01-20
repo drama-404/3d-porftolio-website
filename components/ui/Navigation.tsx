@@ -1,28 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../LanguageSwitcher';
 
 interface NavLink {
-  label: string;
+  key: 'services' | 'aiLab' | 'portfolio' | 'contact';
   href: string;
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Services', href: '#services' },
-  { label: 'AI Lab', href: '#ai-lab' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Contact', href: '#contact' },
+  { key: 'services', href: '#services' },
+  { key: 'aiLab', href: '#ai-lab' },
+  { key: 'portfolio', href: '#portfolio' },
+  { key: 'contact', href: '#contact' },
 ];
 
-const Logo = () => (
-  <a href="#" className="flex items-center gap-2 font-semibold text-text-primary z-50 select-none">
-    <div className="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-accent-cyan to-accent-violet rounded-[4px] flex items-center justify-center">
-      <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-base-darker rounded-full"></div>
-    </div>
-    <span className="tracking-tight text-base md:text-lg font-display">DRAMA</span>
-  </a>
-);
+const Logo = () => {
+  const { t } = useTranslation();
+
+  return (
+    <a href="#" className="flex items-center gap-2 font-semibold text-text-primary z-50 select-none">
+      <div className="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-accent-cyan to-accent-violet rounded-[4px] flex items-center justify-center">
+        <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-base-darker rounded-full"></div>
+      </div>
+      <span className="tracking-tight text-base md:text-lg font-display">{t('brand.name')}</span>
+    </a>
+  );
+};
 
 export const Navigation: React.FC = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -80,13 +87,14 @@ export const Navigation: React.FC = () => {
                   onClick={() => handleNavClick(link.href)}
                   className="text-xs font-mono uppercase tracking-widest text-text-muted hover:text-accent-cyan transition-colors"
                 >
-                  {link.label}
+                  {t(`navigation.links.${link.key}`)}
                 </button>
               ))}
             </div>
 
             {/* CTA Button */}
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center gap-4">
+              <LanguageSwitcher />
               <button
                 onClick={() => handleNavClick('#contact')}
                 className="
@@ -97,7 +105,7 @@ export const Navigation: React.FC = () => {
                   active:scale-95
                 "
               >
-                Let's Talk
+                {t('navigation.cta')}
               </button>
             </div>
 
@@ -142,7 +150,7 @@ export const Navigation: React.FC = () => {
                 transitionDelay: isOpen ? `${index * 75}ms` : '0ms',
               }}
             >
-              {link.label}
+              {t(`navigation.links.${link.key}`)}
             </button>
           ))}
 
@@ -161,8 +169,13 @@ export const Navigation: React.FC = () => {
               transitionDelay: isOpen ? `${navLinks.length * 75}ms` : '0ms',
             }}
           >
-            Let's Talk
+            {t('navigation.cta')}
           </button>
+          <LanguageSwitcher className={`
+            mt-6
+            transition-all duration-300
+            ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
+          `} />
         </div>
       </div>
     </>
