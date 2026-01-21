@@ -102,9 +102,9 @@
     },
     "chatbot": {
       "messages": {
-        "user": "Keni dhoma të lira?",
+        "user": "Do you have available rooms?",
         "aiProcessing": "Checking availability...",
-        "aiRevenue": "Po! 2 dhoma standarde"
+        "aiRevenue": "Yes! 2 standard rooms available."
       }
     },
     "extraction": {

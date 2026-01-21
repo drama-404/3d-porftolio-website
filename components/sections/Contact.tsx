@@ -74,7 +74,7 @@ export const Contact: React.FC = () => {
       icon: <Mail className="w-5 h-5" />,
       label: t('contact.links.email.label'),
       value: t('contact.links.email.value'),
-      href: 'mailto:matrix.dev@gmail.com',
+      href: 'mailto:matriks.dev@gmail.com',
       color: 'cyan',
     },
     {

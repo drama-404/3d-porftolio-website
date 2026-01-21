@@ -83,7 +83,7 @@
       },
       "extraction": {
         "title": "Inteligjencë Dokumentesh",
-        "description": "Nxirrni të dhëna nga faturat, formularët dhe certifikatat. Automatizoni punën me letra që dikur merrte orë të tëra.",
+        "description": "Nxirrni të dhëna nga faturat, formularët dhe certifikatat. Automatizoni dokumentacione që dikur merrnin orë të tëra.",
         "tags": [
           "OCR",
           "Përpunim PDF",
@@ -182,7 +182,7 @@
         ]
       },
       "property-matcher": {
-        "title": "Motor Përputhje Pasurie",
+        "title": "Sistem Rekomandimi Pronash",
         "description": "Sistem rekomandimi pronash me AI për blerës ndërkombëtarë. Kërkim semantik, analizë investimi dhe kualifikim klientësh shumëgjuhësh.",
         "tags": [
           "React",
@@ -200,7 +200,7 @@
     "links": {
       "email": {
         "label": "Email",
-        "value": "matrix.dev@gmail.com"
+        "value": "matriks.dev@gmail.com"
       },
       "whatsapp": {
         "label": "WhatsApp",
