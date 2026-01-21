@@ -125,8 +125,8 @@
     "filters": {
       "all": "All",
       "ai": "AI",
-      "fullStack": "Full-Stack",
-      "enterprise": "Enterprise"
+      "web": "Web",
+      "data": "Data"
     },
     "featured": "Featured",
     "viewAll": "View All Projects",
@@ -141,14 +141,14 @@
           "FastAPI"
         ]
       },
-      "healthcare-coordinator": {
-        "title": "Healthcare Patient Coordinator",
-        "description": "AI-powered intake system for a medical clinic. Automates appointment scheduling, document collection, and multilingual patient communication.",
+      "ecommerce-assistant": {
+        "title": "E-Commerce AI Assistant",
+        "description": "Smart shopping assistant with visual product search. Upload a photo to find matching products, get personalized recommendations, and instant customer support.",
         "tags": [
+          "GPT-4 Vision",
           "Next.js",
-          "OpenAI",
-          "PostgreSQL",
-          "Twilio"
+          "Vector Search",
+          "WebSockets"
         ]
       },
       "agri-traceability": {

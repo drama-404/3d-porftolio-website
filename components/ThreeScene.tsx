@@ -458,7 +458,7 @@ const RubiksCube = () => {
                 scrollTrigger: {
                     trigger: "#services",
                     start: "bottom bottom",
-                    endTrigger: "#portfolio",
+                    endTrigger: "#contact",
                     end: "center center",
                     scrub: 1,
                 }
@@ -513,7 +513,7 @@ const RubiksCube = () => {
             // 5. Physics Drop (to Footer)
             const tl3 = gsap.timeline({
                 scrollTrigger: {
-                    trigger: "#portfolio",
+                    trigger: "#contact",
                     start: "center center",
                     endTrigger: "footer",
                     end: "bottom bottom",

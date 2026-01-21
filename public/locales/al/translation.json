@@ -125,8 +125,8 @@
     "filters": {
       "all": "Të Gjitha",
       "ai": "AI",
-      "fullStack": "Full-Stack",
-      "enterprise": "Enterprise"
+      "web": "Web",
+      "data": "Të Dhëna"
     },
     "featured": "Në Evidencë",
     "viewAll": "Shiko Të Gjitha Projektet",
@@ -141,14 +141,14 @@
           "FastAPI"
         ]
       },
-      "healthcare-coordinator": {
-        "title": "Koordinator Pacientësh",
-        "description": "Sistem intake me AI për klinika mjekësore. Automatizon planifikimin e takimeve, mbledhjen e dokumenteve dhe komunikimin shumëgjuhësh me pacientët.",
+      "ecommerce-assistant": {
+        "title": "Asistent AI për E-Commerce",
+        "description": "Asistent i zgjuar blerjesh me kërkim vizual produktesh. Ngarko një foto për të gjetur produkte të ngjashme, merr rekomandime të personalizuara dhe mbështetje të menjëhershme.",
         "tags": [
+          "GPT-4 Vision",
           "Next.js",
-          "OpenAI",
-          "PostgreSQL",
-          "Twilio"
+          "Vector Search",
+          "WebSockets"
         ]
       },
       "agri-traceability": {

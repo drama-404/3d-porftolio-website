@@ -188,6 +188,114 @@
         text-shadow: 0 2px 8px rgba(10, 10, 15, 0.8),
                      0 0 20px rgba(10, 10, 15, 0.6);
       }
+
+      /* ─────────────────────────────────────────────────────────────────────────────
+         PORTFOLIO CARD ANIMATIONS
+         ─────────────────────────────────────────────────────────────────────────── */
+
+      /* Floating animation for chat bubbles */
+      @keyframes float-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      .animate-float-slow {
+        animation: float-slow 3s ease-in-out infinite;
+      }
+
+      /* Delayed floating for AI responses */
+      @keyframes float-delayed {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+      .animate-float-delayed {
+        animation: float-delayed 3s ease-in-out 0.5s infinite;
+      }
+
+      /* Slow bounce for icons */
+      @keyframes bounce-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+      .animate-bounce-slow {
+        animation: bounce-slow 2s ease-in-out infinite;
+      }
+
+      /* Slide right for arrows */
+      @keyframes slide-right {
+        0%, 100% { opacity: 0.3; transform: translateX(0); }
+        50% { opacity: 0.8; transform: translateX(4px); }
+      }
+      .animate-slide-right {
+        animation: slide-right 1.5s ease-in-out infinite;
+      }
+
+      /* Fade in with upward motion */
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.5s ease-out forwards;
+        opacity: 0;
+      }
+
+      /* Fade in with left motion */
+      @keyframes fade-in-left {
+        from { opacity: 0; transform: translateX(10px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .animate-fade-in-left {
+        animation: fade-in-left 0.5s ease-out forwards;
+        opacity: 0;
+      }
+
+      /* Simple fade in */
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+        opacity: 0;
+      }
+
+      /* Traceability line animation */
+      @keyframes trace-line {
+        0% { left: 0; }
+        100% { left: calc(100% - 8px); }
+      }
+      .animate-trace-line {
+        animation: trace-line 2s ease-in-out infinite;
+      }
+      .animate-trace-line-delayed {
+        animation: trace-line 2s ease-in-out 1s infinite;
+      }
+
+      /* Document scanning animation */
+      @keyframes scan {
+        0%, 100% { transform: translateY(0); opacity: 0.6; }
+        50% { transform: translateY(60px); opacity: 1; }
+      }
+      .animate-scan {
+        animation: scan 2s ease-in-out infinite;
+      }
+
+      /* Width growth for progress bars */
+      @keyframes grow-width {
+        from { width: 0; }
+      }
+      .animate-grow-width {
+        animation: grow-width 1s ease-out forwards;
+      }
+
+      /* Orbiting animation for vector search visualization */
+      @keyframes orbit {
+        0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+      }
+      .animate-orbit {
+        animation: orbit 4s linear infinite;
+      }
     </style>
   <script type="importmap">
 {
@@ -205,7 +313,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>

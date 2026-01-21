@@ -150,7 +150,7 @@ export const Contact: React.FC = () => {
   const errorStyles = 'border-accent-magenta/50';
 
   return (
-    <section id="contact" className="relative py-16 sm:py-20 md:py-24 lg:py-26 px-6 sm:px-12 md:px-16 lg:px-24 bg-gradient-to-b from-base-dark to-base-darker">
+    <section id="contact" className="relative py-16 sm:py-20 md:py-24 lg:py-26 px-6 sm:px-12 md:px-16 lg:px-24">
       <div className="max-w-[1200px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
