@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Engineer Portfolio</title>
+    <title>Matriks Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,6 +166,27 @@
       }
       .text-glow-magenta {
         text-shadow: 0 0 20px rgba(247, 37, 133, 0.5);
+      }
+
+      /* ─────────────────────────────────────────────────────────────────────────────
+         GRADIENT TEXT WITH OUTLINE (for hero title)
+         Dark stroke creates crisp edge contrast against busy backgrounds
+         ─────────────────────────────────────────────────────────────────────────── */
+      .gradient-text-outline {
+        background: linear-gradient(135deg, #00f5d4 0%, #7b2cbf 50%, #f72585 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-stroke: 1px rgba(10, 10, 15, 0.5);
+        paint-order: stroke fill;
+      }
+
+      /* ─────────────────────────────────────────────────────────────────────────────
+         TEXT WITH SUBTLE BACKDROP (for better readability over 3D scene)
+         ─────────────────────────────────────────────────────────────────────────── */
+      .text-readable {
+        text-shadow: 0 2px 8px rgba(10, 10, 15, 0.8),
+                     0 0 20px rgba(10, 10, 15, 0.6);
       }
     </style>
   <script type="importmap">

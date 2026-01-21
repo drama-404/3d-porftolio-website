@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "DRAMA"
+    "name": "MATRIKS"
   },
   "language": {
     "en": "EN",
@@ -31,38 +31,38 @@
     }
   },
   "services": {
-    "badge": "Çfarë ofrojmë",
+    "badge": "Çfarë Ofrojmë",
     "title": "Shërbimet",
-    "subtitle": "Nga sistemet inteligjente AI deri te aplikacionet web të shkallëzueshme, ne ofrojmë zgjidhje të plota që sjellin vlerë reale për biznesin.",
+    "subtitle": "Nga asistentë AI shumëgjuhësh deri te automatizimi i dokumenteve, ndërtojmë zgjidhje inteligjente që ndihmojnë bizneset lokale të konkurrojnë globalisht.",
     "items": {
       "ai": {
-        "title": "Shërbime AI & Inteligjencë",
-        "description": "Zgjidhje të personalizuara AI, nga agjentët bashkëbisedues deri te arkitekturat komplekse neurale që transformojnë operacionet e biznesit.",
+        "title": "AI & Automatizim",
+        "description": "Asistentë inteligjentë, përpunim dokumentesh dhe automatizim i punës që reduktojnë punën manuale dhe përmirësojnë eksperiencën e klientit.",
         "features": [
-          "Integrim LLM",
-          "Modele të Personalizuara",
-          "Agjentë AI",
+          "Chatbot Shumëgjuhësh",
+          "Document AI",
+          "Automatizim i Zgjuar",
           "Sisteme RAG"
         ]
       },
       "fullstack": {
-        "title": "Zhvillime Full-Stack",
-        "description": "Aplikacione web moderne të ndërtuara me teknologji të avancuara, të optimizuara për performancë dhe shkallëzueshmëri.",
+        "title": "Aplikacione Web & Mobile",
+        "description": "Aplikacione moderne me ndërfaqe të bukura, të ndërtuara për performancë në çdo pajisje. Nga sisteme rezervimi deri te panele kontrolli.",
         "features": [
-          "Next.js/React",
-          "Node.js APIs",
-          "Arkitekturë Cloud",
-          "Sisteme në Kohë Reale"
+          "React/Next.js",
+          "React Native",
+          "Funksione Real-time",
+          "Zhvillim API"
         ]
       },
       "enterprise": {
-        "title": "Sisteme Enterprise",
-        "description": "Zgjidhje të shkallëzueshme të dizejnuara për kërkesa komplekse biznesi me besueshmëri të nivelit korporativ.",
+        "title": "Të Dhëna & Integrim",
+        "description": "Lidhni sistemet tuaja, automatizoni raportimin dhe fitoni njohuri nga të dhënat tuaja. Ndërtuar për përputhshmëri dhe shkallëzueshmëri.",
         "features": [
-          "Dizajn Sistemi",
-          "Automatizim",
-          "Integrim",
-          "Data Pipelines"
+          "Data Pipelines",
+          "Integrim Sistemesh",
+          "Panele Analitike",
+          "Përputhshmëri BE"
         ]
       }
     }
@@ -70,47 +70,47 @@
   "aiLab": {
     "badge": "Aftësitë",
     "title": "Laboratori AI",
-    "subtitle": "Eksploroni aftësitë e avancuara të AI përmes demonstrimeve interaktive. Këto përfaqësojnë teknologjitë kryesore që implementojmë për klientët.",
+    "subtitle": "Aftësitë kryesore të AI që implementojmë për klientët — nga asistentë shumëgjuhësh deri te përpunimi inteligjent i dokumenteve.",
     "demos": {
       "chatbot": {
-        "title": "AI Bashkëbisedues",
-        "description": "Chatbot inteligjentë të fuqizuar nga LLM-të me ndërgjegjësim kontekstual, memorie dhe integrim mjetesh.",
+        "title": "Asistentë Shumëgjuhësh",
+        "description": "Asistentë AI që flasin gjuhën e klientëve tuaj — shqip, anglisht, italisht, gjermanisht — me ndërgjegjësim kontekstual dhe kalim të zgjuar.",
         "tags": [
-          "LangChain",
+          "WhatsApp",
           "RAG",
-          "Memorie"
+          "Shumëgjuhësh"
         ]
       },
       "extraction": {
-        "title": "Nxjerrje e Të Dhënave",
-        "description": "Transformoni dokumente të pastrukturuara në të dhëna të pastra me saktësi të lartë.",
+        "title": "Inteligjencë Dokumentesh",
+        "description": "Nxirrni të dhëna nga faturat, formularët dhe certifikatat. Automatizoni punën me letra që dikur merrte orë të tëra.",
         "tags": [
           "OCR",
-          "NLP",
-          "Skema"
+          "Përpunim PDF",
+          "Validim"
         ]
       },
       "automation": {
-        "title": "Automatizim i Punës",
-        "description": "Motorë vendimmarrës të fuqizuar nga AI që automatizojnë procese komplekse biznesi.",
+        "title": "Rrjedha Pune të Zgjuara",
+        "description": "Agjentë AI që trajtojnë detyra të përsëritshme — konfirmime rezervimi, ndjekje, gjenerim raportesh, e më shumë.",
         "tags": [
           "Agjentë",
-          "Mjete",
-          "Orkestrim"
+          "Planifikim",
+          "Njoftime"
         ]
       }
     },
     "chatbot": {
       "messages": {
-        "user": "Analizo raportin e T3",
-        "aiProcessing": "Duke procesuar 47 faqe...",
-        "aiRevenue": "Të ardhurat u rritën me 23%"
+        "user": "Keni dhoma të lira?",
+        "aiProcessing": "Duke kontrolluar...",
+        "aiRevenue": "Po! 2 dhoma standarde"
       }
     },
     "extraction": {
       "json": {
-        "line1": "\"të_dhëna\": [...],",
-        "line2": "\"statusi\": \"ok\""
+        "line1": "\"faturë\": {...},",
+        "line2": "\"total\": \"€1,250\""
       }
     },
     "cta": {
@@ -121,7 +121,7 @@
   "portfolio": {
     "badge": "Puna Jonë",
     "title": "Portofolio",
-    "subtitle": "Një përzgjedhje projektesh që shfaqin ekspertizën tonë në AI, zhvillim full-stack dhe sisteme enterprise.",
+    "subtitle": "Zgjidhje reale për biznese reale — nga AI për turizmin deri te sistemet e gjurmueshmërisë për bujqësinë.",
     "filters": {
       "all": "Të Gjitha",
       "ai": "AI",
@@ -131,64 +131,64 @@
     "featured": "Në Evidencë",
     "viewAll": "Shiko Të Gjitha Projektet",
     "projects": {
-      "rag-chatbot": {
-        "title": "Enterprise RAG Chatbot",
-        "description": "Chatbot produksioni me RAG (Retrieval-Augmented Generation) për një kompani Fortune 500. Trajton 10k+ kërkesa në ditë me 95% kënaqësi.",
+      "hospitality-assistant": {
+        "title": "Asistent AI për Turizmin",
+        "description": "Asistent rezervimi shumëgjuhësh për sektorin e turizmit. Trajton pyetje në 5 gjuhë përmes WhatsApp, duke reduktuar kohën e përgjigjes dhe rritur rezervimet direkte.",
         "tags": [
           "LangChain",
-          "OpenAI",
-          "Pinecone",
+          "WhatsApp API",
+          "RAG",
           "FastAPI"
         ]
       },
-      "saas-platform": {
-        "title": "Platformë SaaS me AI",
-        "description": "Platformë full-stack që u mundëson bizneseve të krijojnë rrjedha pune AI të personalizuara pa kod. 5k+ përdorues aktivë.",
+      "healthcare-coordinator": {
+        "title": "Koordinator Pacientësh",
+        "description": "Sistem intake me AI për klinika mjekësore. Automatizon planifikimin e takimeve, mbledhjen e dokumenteve dhe komunikimin shumëgjuhësh me pacientët.",
         "tags": [
           "Next.js",
-          "TypeScript",
+          "OpenAI",
           "PostgreSQL",
-          "Stripe"
+          "Twilio"
         ]
       },
-      "data-pipeline": {
-        "title": "Data Pipeline në Kohë Reale",
-        "description": "Sistem orkestrimi të dhënash enterprise që proceson 1M+ evente në orë me 99.99% uptime.",
+      "agri-traceability": {
+        "title": "Platformë Gjurmueshmërie Bujqësore",
+        "description": "Gjurmim i zinxhirit të furnizimit për eksportuesit e ushqimit. Verifikim me QR dhe dokumentacion përputhshmërie për BE për tregjet ndërkombëtare.",
         "tags": [
-          "Kafka",
-          "Python",
-          "Kubernetes",
-          "AWS"
-        ]
-      },
-      "document-ai": {
-        "title": "Inteligjencë Dokumentesh",
-        "description": "Sistem AI për procesimin e automatizuar të dokumenteve, klasifikimin dhe nxjerrjen e të dhënave me saktësi 99%.",
-        "tags": [
-          "PyTorch",
-          "Anthropic",
+          "React Native",
           "FastAPI",
-          "Redis"
+          "PostgreSQL",
+          "AWS S3"
         ]
       },
-      "analytics-dashboard": {
-        "title": "Panel Analitik",
-        "description": "Platformë analitike në kohë reale me komponentë vizualizimi të personalizuar dhe njohuri parashikuese.",
+      "document-processor": {
+        "title": "Përpunues Faturash & Dokumentesh",
+        "description": "Pipeline nxjerrjeje me AI për rrjedhat e kontabilitetit. Përpunon formate lokale faturash, kategorizon shpenzimet dhe eksporton në software kontabiliteti.",
+        "tags": [
+          "GPT-4 Vision",
+          "Python",
+          "FastAPI",
+          "OCR"
+        ]
+      },
+      "reputation-dashboard": {
+        "title": "Panel Inteligjence Reputacioni",
+        "description": "Grumbullim vlerësimesh dhe analizë sentimenti për bizneset e turizmit. Monitoron platforma të shumta dhe gjeneron sugjerime përgjigjeje me AI.",
+        "tags": [
+          "Next.js",
+          "OpenAI",
+          "PostgreSQL",
+          "Cron Jobs"
+        ]
+      },
+      "property-matcher": {
+        "title": "Motor Përputhje Pasurie",
+        "description": "Sistem rekomandimi pronash me AI për blerës ndërkombëtarë. Kërkim semantik, analizë investimi dhe kualifikim klientësh shumëgjuhësh.",
         "tags": [
           "React",
-          "D3.js",
-          "Node.js",
-          "MongoDB"
-        ]
-      },
-      "integration-hub": {
-        "title": "Qendër Integrimi",
-        "description": "Platformë integrimi enterprise që lidh 50+ shërbime me rrugëzim inteligjent dhe monitorim.",
-        "tags": [
-          "Node.js",
-          "GraphQL",
-          "Docker",
-          "Terraform"
+          "pgvector",
+          "FastAPI",
+          "Embeddings"
         ]
       }
     }
@@ -200,11 +200,11 @@
     "links": {
       "email": {
         "label": "Email",
-        "value": "hello@drama.dev"
+        "value": "matrix.dev@gmail.com"
       },
-      "linkedin": {
-        "label": "LinkedIn",
-        "value": "Lidhuni me ne"
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "Bisedoni me ne"
       },
       "calendly": {
         "label": "Calendly",
@@ -247,7 +247,7 @@
     }
   },
   "footer": {
-    "copyright": "© {{year}} DRAMA. Të gjitha të drejtat e rezervuara.",
+    "copyright": "© {{year}} MATRIKS. Të gjitha të drejtat e rezervuara.",
     "location": {
       "prefix": "Me bazë në",
       "country": "Shqipëri",
@@ -257,7 +257,8 @@
     "social": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "twitter": "Twitter"
+      "instagram": "Instagram",
+      "tiktok": "TikTok"
     },
     "madeWith": {
       "prefix": "Dizenjuar & ndërtuar me",

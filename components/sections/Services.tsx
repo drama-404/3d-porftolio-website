@@ -202,7 +202,7 @@ export const Services: React.FC = () => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-6">
             <span className="gradient-text">{t('services.title')}</span>
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+          <p className="text-text-secondary text-lg max-w-2xl mx-auto text-readable">
             {t('services.subtitle')}
           </p>
         </div>

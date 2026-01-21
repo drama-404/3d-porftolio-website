@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "DRAMA"
+    "name": "MATRIKS"
   },
   "language": {
     "en": "EN",
@@ -33,36 +33,36 @@
   "services": {
     "badge": "What We Do",
     "title": "Services",
-    "subtitle": "From intelligent AI systems to scalable web applications, we deliver end-to-end solutions that drive real business value.",
+    "subtitle": "From multilingual AI assistants to document automation, we build intelligent solutions that help local businesses compete globally.",
     "items": {
       "ai": {
-        "title": "AI & Intelligence Services",
-        "description": "Custom AI solutions from conversational agents to complex neural architectures that transform how businesses operate.",
+        "title": "AI & Automation",
+        "description": "Intelligent assistants, document processing, and workflow automation that reduce manual work and improve customer experience.",
         "features": [
-          "LLM Integration",
-          "Custom Models",
-          "AI Agents",
+          "Multilingual Chatbots",
+          "Document AI",
+          "Smart Automation",
           "RAG Systems"
         ]
       },
       "fullstack": {
-        "title": "Full-Stack Engineering",
-        "description": "Modern web applications built with cutting-edge technologies, optimized for performance and scalability.",
+        "title": "Web & Mobile Apps",
+        "description": "Modern applications with beautiful interfaces, built for performance on any device. From booking systems to dashboards.",
         "features": [
-          "Next.js/React",
-          "Node.js APIs",
-          "Cloud Architecture",
-          "Real-time Systems"
+          "React/Next.js",
+          "React Native",
+          "Real-time Features",
+          "API Development"
         ]
       },
       "enterprise": {
-        "title": "Enterprise Systems",
-        "description": "Scalable solutions designed for complex business requirements with enterprise-grade reliability.",
+        "title": "Data & Integration",
+        "description": "Connect your systems, automate reporting, and gain insights from your data. Built for compliance and scalability.",
         "features": [
-          "System Design",
-          "Automation",
-          "Integration",
-          "Data Pipelines"
+          "Data Pipelines",
+          "System Integration",
+          "Analytics Dashboards",
+          "EU Compliance"
         ]
       }
     }
@@ -70,47 +70,47 @@
   "aiLab": {
     "badge": "Capabilities",
     "title": "The AI Lab",
-    "subtitle": "Explore cutting-edge AI capabilities through interactive demonstrations. These represent core technologies we implement for clients.",
+    "subtitle": "Core AI capabilities we implement for clients — from multilingual assistants to intelligent document processing.",
     "demos": {
       "chatbot": {
-        "title": "Conversational AI",
-        "description": "Intelligent chatbots powered by LLMs with context awareness, memory, and tool integration.",
+        "title": "Multilingual Assistants",
+        "description": "AI assistants that speak your customers' language — Albanian, English, Italian, German — with context awareness and smart handoffs.",
         "tags": [
-          "LangChain",
+          "WhatsApp",
           "RAG",
-          "Memory"
+          "Multilingual"
         ]
       },
       "extraction": {
-        "title": "Data Extraction",
-        "description": "Transform unstructured documents into clean, structured JSON data with high accuracy.",
+        "title": "Document Intelligence",
+        "description": "Extract data from invoices, forms, and certificates. Automate paperwork that used to take hours.",
         "tags": [
           "OCR",
-          "NLP",
-          "Schema"
+          "PDF Processing",
+          "Validation"
         ]
       },
       "automation": {
-        "title": "Workflow Automation",
-        "description": "AI-powered decision engines that automate complex business processes and workflows.",
+        "title": "Smart Workflows",
+        "description": "AI agents that handle repetitive tasks — booking confirmations, follow-ups, report generation, and more.",
         "tags": [
           "Agents",
-          "Tools",
-          "Orchestration"
+          "Scheduling",
+          "Notifications"
         ]
       }
     },
     "chatbot": {
       "messages": {
-        "user": "Analyze Q3 report",
-        "aiProcessing": "Processing 47 pages...",
-        "aiRevenue": "Revenue up 23%"
+        "user": "Keni dhoma të lira?",
+        "aiProcessing": "Checking availability...",
+        "aiRevenue": "Po! 2 dhoma standarde"
       }
     },
     "extraction": {
       "json": {
-        "line1": "\"data\": [...],",
-        "line2": "\"status\": \"ok\""
+        "line1": "\"invoice\": {...},",
+        "line2": "\"total\": \"€1,250\""
       }
     },
     "cta": {
@@ -121,7 +121,7 @@
   "portfolio": {
     "badge": "Our Work",
     "title": "Portfolio",
-    "subtitle": "A selection of projects showcasing our expertise in AI, full-stack development, and enterprise systems.",
+    "subtitle": "Real solutions for real businesses — from hospitality AI to agricultural traceability systems.",
     "filters": {
       "all": "All",
       "ai": "AI",
@@ -131,64 +131,64 @@
     "featured": "Featured",
     "viewAll": "View All Projects",
     "projects": {
-      "rag-chatbot": {
-        "title": "Enterprise RAG Chatbot",
-        "description": "Production chatbot with retrieval-augmented generation for a Fortune 500 company. Handles 10k+ queries daily with 95% satisfaction rate.",
+      "hospitality-assistant": {
+        "title": "Hospitality AI Assistant",
+        "description": "Multilingual booking assistant for the tourism sector. Handles inquiries in 5 languages via WhatsApp, reducing response time and increasing direct bookings.",
         "tags": [
           "LangChain",
-          "OpenAI",
-          "Pinecone",
+          "WhatsApp API",
+          "RAG",
           "FastAPI"
         ]
       },
-      "saas-platform": {
-        "title": "AI-Powered SaaS Platform",
-        "description": "Full-stack platform enabling businesses to create custom AI workflows without code. 5k+ active users.",
+      "healthcare-coordinator": {
+        "title": "Healthcare Patient Coordinator",
+        "description": "AI-powered intake system for a medical clinic. Automates appointment scheduling, document collection, and multilingual patient communication.",
         "tags": [
           "Next.js",
-          "TypeScript",
+          "OpenAI",
           "PostgreSQL",
-          "Stripe"
+          "Twilio"
         ]
       },
-      "data-pipeline": {
-        "title": "Real-time Data Pipeline",
-        "description": "Enterprise data orchestration system processing 1M+ events per hour with 99.99% uptime.",
+      "agri-traceability": {
+        "title": "Agricultural Traceability Platform",
+        "description": "Mobile-first supply chain tracking for food exporters. QR-based verification and EU compliance documentation for international markets.",
         "tags": [
-          "Kafka",
-          "Python",
-          "Kubernetes",
-          "AWS"
-        ]
-      },
-      "document-ai": {
-        "title": "Document Intelligence",
-        "description": "AI system for automated document processing, classification, and data extraction with 99% accuracy.",
-        "tags": [
-          "PyTorch",
-          "Anthropic",
+          "React Native",
           "FastAPI",
-          "Redis"
+          "PostgreSQL",
+          "AWS S3"
         ]
       },
-      "analytics-dashboard": {
-        "title": "Analytics Dashboard",
-        "description": "Real-time analytics platform with custom visualization components and predictive insights.",
+      "document-processor": {
+        "title": "Invoice & Document Processor",
+        "description": "AI extraction pipeline for accounting workflows. Processes local invoice formats, categorizes expenses, and exports to accounting software.",
+        "tags": [
+          "GPT-4 Vision",
+          "Python",
+          "FastAPI",
+          "OCR"
+        ]
+      },
+      "reputation-dashboard": {
+        "title": "Reputation Intelligence Dashboard",
+        "description": "Review aggregation and sentiment analysis for hospitality businesses. Monitors multiple platforms and generates AI-powered response suggestions.",
+        "tags": [
+          "Next.js",
+          "OpenAI",
+          "PostgreSQL",
+          "Cron Jobs"
+        ]
+      },
+      "property-matcher": {
+        "title": "Real Estate Matching Engine",
+        "description": "AI-powered property recommendation system for international buyers. Semantic search, investment analysis, and multilingual client qualification.",
         "tags": [
           "React",
-          "D3.js",
-          "Node.js",
-          "MongoDB"
-        ]
-      },
-      "integration-hub": {
-        "title": "Integration Hub",
-        "description": "Enterprise integration platform connecting 50+ services with intelligent routing and monitoring.",
-        "tags": [
-          "Node.js",
-          "GraphQL",
-          "Docker",
-          "Terraform"
+          "pgvector",
+          "FastAPI",
+          "Embeddings"
         ]
       }
     }
@@ -200,11 +200,11 @@
     "links": {
       "email": {
         "label": "Email",
-        "value": "hello@drama.dev"
+        "value": "matriks.dev@gmail.com"
       },
-      "linkedin": {
-        "label": "LinkedIn",
-        "value": "Connect with us"
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "Chat with us"
       },
       "calendly": {
         "label": "Calendly",
@@ -247,7 +247,7 @@
     }
   },
   "footer": {
-    "copyright": "© {{year}} DRAMA. All rights reserved.",
+    "copyright": "© {{year}} MATRIKS. All rights reserved.",
     "location": {
       "prefix": "Based in",
       "country": "Albania",
@@ -257,7 +257,8 @@
     "social": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "twitter": "Twitter"
+      "instagram": "Instagram",
+      "tiktok": "TikTok"
     },
     "madeWith": {
       "prefix": "Designed & built with",

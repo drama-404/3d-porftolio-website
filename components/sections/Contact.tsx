@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Calendar, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, MessageCircle, Calendar, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { GlassCard, AccentGlassCard } from '../ui/GlassCard';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
@@ -74,14 +74,14 @@ export const Contact: React.FC = () => {
       icon: <Mail className="w-5 h-5" />,
       label: t('contact.links.email.label'),
       value: t('contact.links.email.value'),
-      href: 'mailto:hello@drama.dev',
+      href: 'mailto:matrix.dev@gmail.com',
       color: 'cyan',
     },
     {
-      icon: <Linkedin className="w-5 h-5" />,
-      label: t('contact.links.linkedin.label'),
-      value: t('contact.links.linkedin.value'),
-      href: 'https://linkedin.com/in/',
+      icon: <MessageCircle className="w-5 h-5" />,
+      label: t('contact.links.whatsapp.label'),
+      value: t('contact.links.whatsapp.value'),
+      href: 'https://wa.me/355698250549',
       color: 'violet',
     },
     {

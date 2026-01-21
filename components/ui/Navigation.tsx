@@ -85,7 +85,7 @@ export const Navigation: React.FC = () => {
                 <button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-xs font-mono uppercase tracking-widest text-text-muted hover:text-accent-cyan transition-colors"
+                  className="text-xs font-mono uppercase tracking-widest text-text-secondary hover:text-accent-cyan transition-colors text-readable"
                 >
                   {t(`navigation.links.${link.key}`)}
                 </button>

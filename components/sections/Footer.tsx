@@ -1,5 +1,12 @@
 import React from 'react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
+
+// Custom TikTok icon (lucide-react doesn't include it)
+const TikTok = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
 import { useTranslation } from 'react-i18next';
 
 const Logo = () => {
@@ -21,7 +28,8 @@ export const Footer: React.FC = () => {
   const socialLinks = [
     { icon: <Github size={20} />, href: 'https://github.com/', label: t('footer.social.github') },
     { icon: <Linkedin size={20} />, href: 'https://linkedin.com/in/', label: t('footer.social.linkedin') },
-    { icon: <Twitter size={20} />, href: 'https://twitter.com/', label: t('footer.social.twitter') },
+    { icon: <Instagram size={20} />, href: 'https://instagram.com/', label: t('footer.social.instagram') },
+    { icon: <TikTok size={20} />, href: 'https://tiktok.com/', label: t('footer.social.tiktok') },
   ];
 
   return (
@@ -31,19 +39,19 @@ export const Footer: React.FC = () => {
           {/* Logo & Copyright */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <Logo />
-            <p className="text-text-muted text-sm">
+            <p className="text-text-secondary text-sm text-readable">
               {t('footer.copyright', { year: currentYear })}
             </p>
           </div>
 
           {/* Location */}
           <div className="text-center">
-            <p className="text-text-secondary text-sm">
+            <p className="text-text-secondary text-sm text-readable">
               {t('footer.location.prefix')}{' '}
-              <span className="text-accent-cyan">{t('footer.location.country')}</span>
+              <span className="text-accent-cyan text-glow-cyan">{t('footer.location.country')}</span>
               {t('footer.location.suffix')}
             </p>
-            <p className="text-text-muted text-xs mt-1">
+            <p className="text-text-secondary text-xs mt-1 text-readable">
               {t('footer.location.secondary')}
             </p>
           </div>
@@ -76,9 +84,9 @@ export const Footer: React.FC = () => {
 
         {/* Made with */}
         <div className="mt-6 text-center">
-          <p className="text-text-muted text-xs font-mono">
+          <p className="text-text-secondary text-xs font-mono text-readable">
             {t('footer.madeWith.prefix')}{' '}
-            <span className="text-accent-magenta">{t('footer.madeWith.highlight')}</span>{' '}
+            <span className="text-accent-magenta text-glow-magenta">{t('footer.madeWith.highlight')}</span>{' '}
             {t('footer.madeWith.suffix')}
           </p>
         </div>

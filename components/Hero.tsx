@@ -83,18 +83,20 @@ const Hero: React.FC = () => {
                   <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[7.5rem] leading-[1.1] md:leading-[0.95] font-display font-bold text-text-primary tracking-[-0.03em] mb-8 md:mb-12">
                     <span className="gradient-text whitespace-nowrap">{t('hero.title.lead')}</span> <br className="hidden md:block" />
                     <div className="flex flex-wrap items-center gap-2 md:gap-4 mt-2">
-                        <span className="relative font-display italic font-bold text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] text-text-primary">{t('hero.title.highlight')}</span>
+                        <span className="relative font-display italic font-bold text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] text-text-primary text-readable">{t('hero.title.highlight')}</span>
                     </div>
                   </h1>
-                  <div className="mb-6 md:mb-8 flex items-center gap-3 text-accent-magenta font-medium text-xs md:text-base font-mono">
+                  <div className="mb-6 md:mb-8 flex items-center gap-3 text-accent-cyan font-medium text-xs md:text-base font-mono text-glow-cyan">
                     <span className="font-bold">{t('hero.tagline.symbol')}</span>
                     <span>{t('hero.tagline.text')}</span>
                   </div>
-                  <p className="text-text-secondary text-sm md:text-lg leading-relaxed mb-10 md:mb-16 max-w-[280px] sm:max-w-md font-normal">
+                  <p className="text-text-secondary text-sm md:text-lg leading-relaxed mb-10 md:mb-16 max-w-[280px] sm:max-w-md font-normal text-readable">
                     {t('hero.subtitle')}
                   </p>
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-8 w-full sm:w-auto">
-                    <button className="group relative flex items-center justify-between bg-gradient-to-r from-accent-cyan to-accent-violet text-base-darker rounded-full pl-6 md:pl-8 pr-2 py-2 h-14 md:h-16 w-full sm:w-auto min-w-[200px] hover:shadow-glow transition-all duration-300 cursor-pointer active:scale-95">
+                    <button
+                      onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="group relative flex items-center justify-between bg-gradient-to-r from-accent-cyan to-accent-violet text-base-darker rounded-full pl-6 md:pl-8 pr-2 py-2 h-14 md:h-16 w-full sm:w-auto min-w-[200px] hover:shadow-glow transition-all duration-300 cursor-pointer active:scale-95">
                       <span className="text-sm md:text-base font-semibold">{t('hero.cta.primary')}</span>
                       <div className="w-10 h-10 md:w-12 md:h-12 bg-base-darker rounded-full flex items-center justify-center group-hover:scale-105 transition-transform">
                         <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-accent-cyan" />
