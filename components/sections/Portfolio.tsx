@@ -15,34 +15,34 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 'rag-chatbot',
+    id: 'hospitality-assistant',
     category: 'AI',
     gradient: 'from-accent-cyan via-accent-cyan/50 to-base-dark',
     featured: true,
   },
   {
-    id: 'saas-platform',
+    id: 'healthcare-coordinator',
     category: 'Full-Stack',
     gradient: 'from-accent-violet via-accent-violet/50 to-base-dark',
     featured: true,
   },
   {
-    id: 'data-pipeline',
+    id: 'agri-traceability',
     category: 'Enterprise',
     gradient: 'from-accent-magenta via-accent-magenta/50 to-base-dark',
   },
   {
-    id: 'document-ai',
+    id: 'document-processor',
     category: 'AI',
     gradient: 'from-accent-cyan/80 via-accent-violet/50 to-base-dark',
   },
   {
-    id: 'analytics-dashboard',
+    id: 'reputation-dashboard',
     category: 'Full-Stack',
     gradient: 'from-accent-violet/80 via-accent-magenta/50 to-base-dark',
   },
   {
-    id: 'integration-hub',
+    id: 'property-matcher',
     category: 'Enterprise',
     gradient: 'from-accent-magenta/80 via-accent-cyan/50 to-base-dark',
   },
