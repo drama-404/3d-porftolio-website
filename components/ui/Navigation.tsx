@@ -19,11 +19,11 @@ const Logo = () => {
   const { t } = useTranslation();
 
   return (
-    <a href="#" className="flex items-center gap-2 font-semibold text-text-primary z-50 select-none">
+    <a href="#" className="flex items-center gap-2 font-semibold z-50 select-none">
       <div className="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-accent-cyan to-accent-violet rounded-[4px] flex items-center justify-center">
         <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-base-darker rounded-full"></div>
       </div>
-      <span className="tracking-tight text-base md:text-lg font-display">{t('brand.name')}</span>
+      <span className="tracking-tight text-base md:text-lg font-display" style={{ color: '#00f5d4' }}>{t('brand.name')}</span>
     </a>
   );
 };

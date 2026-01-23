@@ -13,11 +13,11 @@ const Logo = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex items-center gap-2 font-semibold text-text-primary">
+    <div className="flex items-center gap-2 font-semibold">
       <div className="w-5 h-5 bg-gradient-to-br from-accent-cyan to-accent-violet rounded-[4px] flex items-center justify-center">
         <div className="w-2 h-2 bg-base-darker rounded-full"></div>
       </div>
-      <span className="tracking-tight text-base font-display">{t('brand.name')}</span>
+      <span className="tracking-tight text-base font-display" style={{ color: '#00f5d4' }}>{t('brand.name')}</span>
     </div>
   );
 };

@@ -120,9 +120,19 @@ export const Contact: React.FC = () => {
 
     setStatus('loading');
 
-    // Simulate API call (replace with actual API integration)
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       setStatus('success');
       setFormData({ name: '', email: '', company: '', message: '' });
     } catch {

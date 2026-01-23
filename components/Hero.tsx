@@ -86,9 +86,9 @@ const Hero: React.FC = () => {
                         <span className="relative font-display italic font-bold text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] text-text-primary text-readable">{t('hero.title.highlight')}</span>
                     </div>
                   </h1>
-                  <div className="mb-6 md:mb-8 flex items-center gap-3 text-accent-cyan font-medium text-xs md:text-base font-mono text-glow-cyan">
-                    <span className="font-bold">{t('hero.tagline.symbol')}</span>
-                    <span>{t('hero.tagline.text')}</span>
+                  <div className="mb-6 md:mb-8 flex items-center gap-3 font-medium text-xs md:text-base font-mono">
+                    <span className="font-bold text-accent-cyan text-glow-cyan">{t('hero.tagline.symbol')}</span>
+                    <span className="text-accent-cyan text-glow-cyan">{t('hero.tagline.text')}</span>
                   </div>
                   <p className="text-text-secondary text-sm md:text-lg leading-relaxed mb-10 md:mb-16 max-w-[280px] sm:max-w-md font-normal text-readable">
                     {t('hero.subtitle')}
