@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ExternalLink, Code2 } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 import { TechBadge, Badge } from '../ui/Badge';
 import { useTranslation } from 'react-i18next';
@@ -390,7 +389,7 @@ const ProjectCard: React.FC<{ project: Project; categoryLabel: string }> = ({ pr
   return (
     <GlassCard
       padding="none"
-      className="overflow-hidden group cursor-pointer"
+      className="portfolio-card overflow-hidden group cursor-pointer"
       glowColor={
         project.category === 'AI' ? 'cyan' :
         project.category === 'Web' ? 'violet' : 'magenta'
@@ -419,15 +418,6 @@ const ProjectCard: React.FC<{ project: Project; categoryLabel: string }> = ({ pr
           </Badge>
         </div>
 
-        {/* Hover overlay with links */}
-        <div className="absolute inset-0 bg-base-darker/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-          <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-text-primary transition-colors">
-            <ExternalLink size={20} />
-          </button>
-          <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-text-primary transition-colors">
-            <Code2 size={20} />
-          </button>
-        </div>
 
         {/* Featured badge */}
         {project.featured && (

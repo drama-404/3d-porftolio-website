@@ -296,6 +296,42 @@
       .animate-orbit {
         animation: orbit 4s linear infinite;
       }
+
+      /* ─────────────────────────────────────────────────────────────────────────────
+         PORTFOLIO ANIMATION CONTROL
+         Desktop: Animations are paused by default, play on hover
+         Mobile: Animations always play (users see one card at a time)
+         ─────────────────────────────────────────────────────────────────────────── */
+
+      /* Desktop only: Pause animations by default (md breakpoint = 768px) */
+      @media (min-width: 768px) {
+        .portfolio-card .animate-float-slow,
+        .portfolio-card .animate-float-delayed,
+        .portfolio-card .animate-bounce-slow,
+        .portfolio-card .animate-slide-right,
+        .portfolio-card .animate-pulse,
+        .portfolio-card .animate-trace-line,
+        .portfolio-card .animate-trace-line-delayed,
+        .portfolio-card .animate-spin,
+        .portfolio-card .animate-scan,
+        .portfolio-card .animate-orbit {
+          animation-play-state: paused;
+        }
+
+        /* Resume animations on hover */
+        .portfolio-card:hover .animate-float-slow,
+        .portfolio-card:hover .animate-float-delayed,
+        .portfolio-card:hover .animate-bounce-slow,
+        .portfolio-card:hover .animate-slide-right,
+        .portfolio-card:hover .animate-pulse,
+        .portfolio-card:hover .animate-trace-line,
+        .portfolio-card:hover .animate-trace-line-delayed,
+        .portfolio-card:hover .animate-spin,
+        .portfolio-card:hover .animate-scan,
+        .portfolio-card:hover .animate-orbit {
+          animation-play-state: running;
+        }
+      }
     </style>
   <script type="importmap">
 {
