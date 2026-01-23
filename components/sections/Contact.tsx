@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
       icon: <Calendar className="w-5 h-5" />,
       label: t('contact.links.calendly.label'),
       value: t('contact.links.calendly.value'),
-      href: 'https://calendly.com/',
+      href: 'https://calendly.com/matriks-dev/30-min-discovery-call',
       color: 'magenta',
     },
   ];
