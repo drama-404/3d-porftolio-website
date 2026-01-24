@@ -82,7 +82,7 @@
         ]
       },
       "extraction": {
-        "title": "Document Intelligence",
+        "title": "Intelligent Document Processing",
         "description": "Extract data from invoices, forms, and certificates. Automate paperwork that used to take hours.",
         "tags": [
           "OCR",
@@ -91,7 +91,7 @@
         ]
       },
       "automation": {
-        "title": "Smart Workflows",
+        "title": "Workflow Automation",
         "description": "AI agents that handle repetitive tasks — booking confirmations, follow-ups, report generation, and more.",
         "tags": [
           "Agents",

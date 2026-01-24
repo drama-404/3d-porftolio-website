@@ -82,7 +82,7 @@
         ]
       },
       "extraction": {
-        "title": "Inteligjencë Dokumentesh",
+        "title": "Përpunim Inteligjent i Dokumenteve",
         "description": "Nxirrni të dhëna nga faturat, formularët dhe certifikatat. Automatizoni dokumentacione që dikur merrnin orë të tëra.",
         "tags": [
           "OCR",
@@ -91,7 +91,7 @@
         ]
       },
       "automation": {
-        "title": "Rrjedha Pune të Zgjuara",
+        "title": "Automatizim i proceseve të punës",
         "description": "Agjentë AI që trajtojnë detyra të përsëritshme — konfirmime rezervimi, ndjekje, gjenerim raportesh, e më shumë.",
         "tags": [
           "Agjentë",
