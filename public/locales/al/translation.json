@@ -9,119 +9,119 @@
   "navigation": {
     "links": {
       "services": "Shërbimet",
-      "aiLab": "Laboratori AI",
-      "portfolio": "Portofolio",
+      "aiLab": "AI në Veprim",
+      "portfolio": "Projektet",
       "contact": "Kontakt"
     },
-    "cta": "Le të Flasim"
+    "cta": "Na Kontaktoni"
   },
   "hero": {
     "title": {
-      "lead": "ARKITEKTUROJMË",
-      "highlight": "\"inteligjencë\""
+      "lead": "AI që punon",
+      "highlight": "për biznesin tuaj"
     },
     "tagline": {
       "symbol": "→",
-      "text": "AI • Full-Stack • Data"
+      "text": "Chatbot • Përpunim Dokumentesh • Aplikacione"
     },
-    "subtitle": "Krijojmë sisteme të sofistikuara AI dhe aplikacione web moderne me saktësi matematikore.",
+    "subtitle": "Ndërtojmë asistentë AI që flasin shqip, anglisht, italisht e gjermanisht. Aplikacione që trajtojnë rezervime, fatura dhe mbështetje klientësh — që të mos merresh ti.",
     "cta": {
-      "primary": "Filloni Projektin",
-      "secondary": "Zbuloni Shërbimet"
+      "primary": "Fillo Projektin",
+      "secondary": "Shiko Punën Tonë"
     }
   },
   "services": {
-    "badge": "Çfarë Ofrojmë",
+    "badge": "Çfarë Ndërtojmë",
     "title": "Shërbimet",
-    "subtitle": "Nga asistentë AI shumëgjuhësh deri te automatizimi i dokumenteve, ndërtojmë zgjidhje inteligjente që ndihmojnë bizneset lokale të konkurrojnë globalisht.",
+    "subtitle": "Asistentë AI, përpunues dokumentesh dhe aplikacione të ndërtuara për biznese në Shqipëri dhe Ballkan — me mbështetje shumëgjuhëshe që nga dita e parë.",
     "items": {
       "ai": {
-        "title": "AI & Automatizim",
-        "description": "Asistentë inteligjentë, përpunim dokumentesh dhe automatizim i punës që reduktojnë punën manuale dhe përmirësojnë eksperiencën e klientit.",
+        "title": "Asistentë AI",
+        "description": "Chatbot që përgjigjen në shqip, anglisht, italisht ose gjermanisht. Të lidhur me WhatsApp, faqen tuaj web, ose mjete të brendshme. Trajtojnë FAQ, rezervime dhe kërkesa mbështetjeje.",
         "features": [
-          "Chatbot Shumëgjuhësh",
-          "Document AI",
-          "Automatizim i Zgjuar",
-          "Sisteme RAG"
+          "Bot WhatsApp",
+          "Chat në Faqe",
+          "5+ Gjuhë",
+          "Mbështetje 24/7"
         ]
       },
       "fullstack": {
         "title": "Aplikacione Web & Mobile",
-        "description": "Aplikacione moderne me ndërfaqe të bukura, të ndërtuara për performancë në çdo pajisje. Nga sisteme rezervimi deri te panele kontrolli.",
+        "description": "Sisteme rezervimi, panele kontrolli dhe mjete të brendshme. Të shpejtë në çdo pajisje. Përdorim React dhe React Native — të njëjtat teknologji si Airbnb dhe Instagram.",
         "features": [
-          "React/Next.js",
-          "React Native",
-          "Funksione Real-time",
-          "Zhvillim API"
+          "Sisteme Rezervimi",
+          "Panele Admin",
+          "Aplikacione Mobile",
+          "Përditësim Real-time"
         ]
       },
       "enterprise": {
-        "title": "Të Dhëna & Integrim",
-        "description": "Lidhni sistemet tuaja, automatizoni raportimin dhe fitoni njohuri nga të dhënat tuaja. Ndërtuar për përputhshmëri dhe shkallëzueshmëri.",
+        "title": "Të Dhëna & Automatizim",
+        "description": "Mos kopjo më të dhëna mes spreadsheet-eve. Lidhim sistemet tuaja, automatizojmë raportet, dhe sigurojmë përputhshmëri me rregulloret e BE-së.",
         "features": [
-          "Data Pipelines",
-          "Integrim Sistemesh",
-          "Panele Analitike",
-          "Përputhshmëri BE"
+          "Përpunim Faturash",
+          "Automatizim Raportesh",
+          "Lidhës Sistemesh",
+          "Përputhshmëri GDPR"
         ]
       }
     }
   },
   "aiLab": {
-    "badge": "Aftësitë",
-    "title": "Laboratori AI",
-    "subtitle": "Aftësitë kryesore të AI që implementojmë për klientët — nga asistentë shumëgjuhësh deri te përpunimi inteligjent i dokumenteve.",
+    "badge": "Çfarë Mund të Bëjë AI",
+    "title": "AI në Veprim",
+    "subtitle": "Shembuj realë të asaj që ndërtojmë. Këto nuk janë koncepte — janë aftësi që kemi dorëzuar për klientët.",
     "demos": {
       "chatbot": {
-        "title": "Asistentë Shumëgjuhësh",
-        "description": "Asistentë AI që flasin gjuhën e klientëve tuaj — shqip, anglisht, italisht, gjermanisht — me ndërgjegjësim kontekstual dhe kalim të zgjuar.",
+        "title": "Chat Shumëgjuhësh",
+        "description": "Një mysafir pyet për disponueshmërinë e dhomave në gjermanisht. Boti kontrollon kalendarin tuaj, përgjigjet në gjermanisht, dhe mund të kalojë tek ekipi juaj nëse nevojitet.",
         "tags": [
           "WhatsApp",
-          "RAG",
-          "Shumëgjuhësh"
+          "5 Gjuhë",
+          "Kalim Live"
         ]
       },
       "extraction": {
-        "title": "Përpunim Inteligjent i Dokumenteve",
-        "description": "Nxirrni të dhëna nga faturat, formularët dhe certifikatat. Automatizoni dokumentacione që dikur merrnin orë të tëra.",
+        "title": "Lexim Faturash",
+        "description": "Ngarko një faturë PDF. AI nxjerr furnitorin, shumën, datën dhe artikujt. Eksporton në softuerin tuaj të kontabilitetit ose spreadsheet.",
         "tags": [
-          "OCR",
-          "Përpunim PDF",
-          "Validim"
+          "PDF → Të Dhëna",
+          "Formate Shqiptare",
+          "Eksport Auto"
         ]
       },
       "automation": {
-        "title": "Automatizim i proceseve të punës",
-        "description": "Agjentë AI që trajtojnë detyra të përsëritshme — konfirmime rezervimi, ndjekje, gjenerim raportesh, e më shumë.",
+        "title": "Automatizim Detyrash",
+        "description": "Rezervim i ri? Dërgo automatikisht konfirmimin. Mysafiri u largua? Kërko një vlerësim. Pagesë e vonuar? Dërgo kujtesë. Gjithçka pa lëvizur gishtin.",
         "tags": [
-          "Agjentë",
-          "Planifikim",
-          "Njoftime"
+          "Email Auto",
+          "Kujtesa",
+          "Ndjekje"
         ]
       }
     },
     "chatbot": {
       "messages": {
         "user": "Keni dhoma të lira?",
-        "aiProcessing": "Duke kontrolluar...",
-        "aiRevenue": "Po! 2 dhoma standarde"
+        "aiProcessing": "Po kontrolloj...",
+        "aiRevenue": "Po! 2 dhoma standard."
       }
     },
     "extraction": {
       "json": {
-        "line1": "\"faturë\": {...},",
+        "line1": "\"furnitor\": \"Vodafone\"",
         "line2": "\"total\": \"€1,250\""
       }
     },
     "cta": {
-      "prompt": "Doni t'i shihni në veprim?",
-      "button": "Kërkoni një Demo"
+      "prompt": "Keni një problem të ngjashëm?",
+      "button": "Le të Flasim"
     }
   },
   "portfolio": {
     "badge": "Puna Jonë",
-    "title": "Portofolio",
-    "subtitle": "Zgjidhje reale për biznese reale — nga AI për turizmin deri te sistemet e gjurmueshmërisë për bujqësinë.",
+    "title": "Projektet",
+    "subtitle": "Projekte që kemi ndërtuar për hotele, dyqane, ferma dhe agjenci imobiliare në Shqipëri dhe Europë.",
     "filters": {
       "all": "Të Gjitha",
       "ai": "AI",
@@ -129,74 +129,68 @@
       "data": "Të Dhëna"
     },
     "featured": "Në Evidencë",
-    "viewAll": "Shiko Të Gjitha Projektet",
+    "viewAll": "Shiko Të Gjitha",
     "projects": {
       "hospitality-assistant": {
-        "title": "Asistent AI për Turizmin",
-        "description": "Asistent rezervimi shumëgjuhësh për sektorin e turizmit. Trajton pyetje në 5 gjuhë përmes WhatsApp, duke reduktuar kohën e përgjigjes dhe rritur rezervimet direkte.",
+        "title": "Bot Rezervimi Hotelesh",
+        "description": "Bot WhatsApp për një zinxhir hotelesh shqiptare. Mysafirët pyesin për dhoma në shqip, anglisht, italisht ose gjermanisht — boti kontrollon disponueshmërinë dhe rezervon direkt. Uli kohën e përgjigjes nga orë në sekonda.",
         "tags": [
-          "LangChain",
-          "WhatsApp API",
-          "RAG",
-          "FastAPI"
+          "WhatsApp",
+          "4 Gjuhë",
+          "Rezervim Direkt"
         ]
       },
       "ecommerce-assistant": {
-        "title": "Asistent AI për E-Commerce",
-        "description": "Asistent i zgjuar blerjesh me kërkim vizual produktesh. Ngarko një foto për të gjetur produkte të ngjashme, merr rekomandime të personalizuara dhe mbështetje të menjëhershme.",
+        "title": "Kërkim Vizual Produktesh",
+        "description": "Klienti ngarkon një foto të një fustani që i pëlqen. AI gjen artikuj të ngjashëm në katalogun e dyqanit. Funksionon në celular, përgjigjet në më pak se 2 sekonda.",
         "tags": [
-          "GPT-4 Vision",
-          "Next.js",
-          "Vector Search",
-          "WebSockets"
+          "Kërkim me Foto",
+          "Përputhje Produktesh",
+          "Mobile-First"
         ]
       },
       "agri-traceability": {
-        "title": "Platformë Gjurmueshmërie Bujqësore",
-        "description": "Gjurmim i zinxhirit të furnizimit për eksportuesit e ushqimit. Verifikim me QR dhe dokumentacion përputhshmërie për BE për tregjet ndërkombëtare.",
+        "title": "Gjurmues Fermë-në-Eksport",
+        "description": "Aplikacion mobile për eksportuesit shqiptarë të ushqimit. Skano një kod QR për të parë nga erdhi produkti, si u përpunua, dhe certifikatat e përputhshmërisë BE. E detyrueshme për eksporte në Gjermani dhe Itali.",
         "tags": [
-          "React Native",
-          "FastAPI",
-          "PostgreSQL",
-          "AWS S3"
+          "Kode QR",
+          "Përputhshmëri BE",
+          "Zinxhir Furnizimi"
         ]
       },
       "document-processor": {
-        "title": "Përpunues Faturash & Dokumentesh",
-        "description": "Pipeline nxjerrjeje me AI për rrjedhat e kontabilitetit. Përpunon formate lokale faturash, kategorizon shpenzimet dhe eksporton në software kontabiliteti.",
+        "title": "Përpunues Faturash",
+        "description": "Ngarko një grumbull faturash PDF. AI i lexon ato — edhe ato shqiptare të shkruara me dorë — nxjerr të dhënat, dhe eksporton në softuerin tuaj të kontabilitetit. Kurseu 15+ orë në javë për një klient.",
         "tags": [
-          "GPT-4 Vision",
-          "Python",
-          "FastAPI",
-          "OCR"
+          "Lexim PDF",
+          "OCR Shqip",
+          "Eksport Auto"
         ]
       },
       "reputation-dashboard": {
-        "title": "Panel Inteligjence Reputacioni",
-        "description": "Grumbullim vlerësimesh dhe analizë sentimenti për bizneset e turizmit. Monitoron platforma të shumta dhe gjeneron sugjerime përgjigjeje me AI.",
+        "title": "Panel Vlerësimesh",
+        "description": "Një ekran që tregon vlerësimet nga Booking.com, Google, TripAdvisor. Shiko trendet e sentimentit. Merr sugjerime përgjigjesh me AI. Ndërtuar për një grup hotelesh që menaxhon 12 prona.",
         "tags": [
-          "Next.js",
-          "OpenAI",
-          "PostgreSQL",
-          "Cron Jobs"
+          "Multi-Platformë",
+          "Analizë Sentimenti",
+          "Ndihmës Përgjigjesh"
         ]
       },
       "property-matcher": {
-        "title": "Sistem Rekomandimi Pronash",
-        "description": "Sistem rekomandimi pronash me AI për blerës ndërkombëtarë. Kërkim semantik, analizë investimi dhe kualifikim klientësh shumëgjuhësh.",
+        "title": "Përputhës Pronash",
+        "description": "Faqe imobiliare për blerës ndërkombëtarë. Përshkruaj çfarë dëshiron në anglisht të thjeshtë — 'pamje deti, nën €200k, jug Shqipërie' — dhe AI gjen pronat përkatëse.",
         "tags": [
-          "React",
-          "pgvector",
-          "FastAPI",
-          "Embeddings"
+          "Gjuhë Natyrore",
+          "Kërkim Pronash",
+          "Shumëgjuhësh"
         ]
       }
     }
   },
   "contact": {
     "badge": "Na Kontaktoni",
-    "title": "Le të Bashkëpunojmë",
-    "subtitle": "Keni një projekt në mendje? Do të dëshironim ta dëgjonim. Na dërgoni një mesazh dhe le të krijojmë diçka të mrekullueshme së bashku.",
+    "title": "Le të Flasim",
+    "subtitle": "Na tregoni çfarë po përpiqeni të ndërtoni. Do t'ju kthejmë përgjigje brenda 24 orëve.",
     "links": {
       "email": {
         "label": "Email",
@@ -204,18 +198,18 @@
       },
       "whatsapp": {
         "label": "WhatsApp",
-        "value": "Bisedoni me ne"
+        "value": "Bisedo me ne"
       },
       "calendly": {
         "label": "Calendly",
-        "value": "Rezervoni një telefonatë"
+        "value": "Rezervo telefonatë"
       }
     },
     "form": {
       "success": {
         "title": "Mesazhi u Dërgua!",
-        "body": "Faleminderit që na kontaktuat. Do t'ju kthejmë përgjigje së shpejti.",
-        "cta": "Dërgo Një Mesazh Tjetër"
+        "body": "Faleminderit që na kontaktuat. Do t'ju përgjigjemi brenda 24 orëve.",
+        "cta": "Dërgo Mesazh Tjetër"
       },
       "labels": {
         "name": "Emri *",
@@ -224,10 +218,10 @@
         "message": "Mesazhi *"
       },
       "placeholders": {
-        "name": "Emri Juaj",
-        "email": "emri@kompania.com",
+        "name": "Emri juaj",
+        "email": "ti@kompania.com",
         "company": "Kompania Juaj",
-        "message": "Na tregoni rreth projektit tuaj..."
+        "message": "Çfarë po përpiqeni të ndërtoni ose automatizoni?"
       },
       "errors": {
         "name": "Emri duhet të ketë të paktën 2 karaktere",
@@ -239,11 +233,11 @@
     },
     "direct": {
       "title": "Kontakt i Drejtpërdrejtë",
-      "subtitle": "Preferoni të kontaktoni direkt? Zgjidhni metodën tuaj të preferuar më poshtë."
+      "subtitle": "Preferoni një bisedë të shpejtë? Zgjidhni kanalin tuaj."
     },
     "availability": {
-      "title": "Të disponueshëm për projekte të reja",
-      "subtitle": "Aktualisht duke pranuar projekte duke filluar nga Shkurti 2025."
+      "title": "Duke marrë projekte të reja",
+      "subtitle": "Aktualisht duke rezervuar për Shkurt 2026 e më tej."
     }
   },
   "footer": {
@@ -251,8 +245,8 @@
     "location": {
       "prefix": "Me bazë në",
       "country": "Shqipëri",
-      "suffix": ", duke punuar globalisht.",
-      "secondary": "Duke krijuar zgjidhje inteligjente nëpër zona të ndryshme kohore."
+      "suffix": ", duke shërbyer klientë në Europë.",
+      "secondary": "Flasim shqip, anglisht, italisht & gjermanisht."
     },
     "social": {
       "github": "GitHub",
@@ -261,9 +255,9 @@
       "tiktok": "TikTok"
     },
     "madeWith": {
-      "prefix": "Dizenjuar & ndërtuar me",
-      "highlight": "saktësi",
-      "suffix": "duke përdorur React, Three.js & GSAP"
+      "prefix": "Ndërtuar me",
+      "highlight": "React",
+      "suffix": ", Three.js & shumë kafe"
     }
   },
   "errors": {

@@ -13,12 +13,12 @@ interface Service {
   features: string[];
 }
 
-// Animated visual for each service card
+// Simplified visual for each service card - cleaner, less distracting
 const ServiceVisual: React.FC<{ service: Service }> = ({ service }) => {
   const colorClasses = {
-    cyan: 'from-accent-cyan/20 to-transparent border-accent-cyan/30',
-    violet: 'from-accent-violet/20 to-transparent border-accent-violet/30',
-    magenta: 'from-accent-magenta/20 to-transparent border-accent-magenta/30',
+    cyan: 'from-accent-cyan/10 to-transparent border-accent-cyan/20',
+    violet: 'from-accent-violet/10 to-transparent border-accent-violet/20',
+    magenta: 'from-accent-magenta/10 to-transparent border-accent-magenta/20',
   };
 
   const iconColors = {
@@ -27,93 +27,56 @@ const ServiceVisual: React.FC<{ service: Service }> = ({ service }) => {
     magenta: 'text-accent-magenta',
   };
 
-  const glowColors = {
-    cyan: 'shadow-[0_0_60px_rgba(0,245,212,0.3)]',
-    violet: 'shadow-[0_0_60px_rgba(123,44,191,0.3)]',
-    magenta: 'shadow-[0_0_60px_rgba(247,37,133,0.3)]',
-  };
-
   return (
     <div className={`
-      relative h-48 rounded-xl overflow-hidden
+      relative h-40 rounded-xl overflow-hidden
       bg-gradient-to-br ${colorClasses[service.color]}
       border border-white/5
       flex items-center justify-center
-      group-hover:${glowColors[service.color]}
-      transition-all duration-500
+      transition-all duration-300
     `}>
-      {/* Animated grid background */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Subtle grid background */}
+      <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          {/* Vertical lines */}
-          {[...Array(10)].map((_, i) => (
+          {[...Array(6)].map((_, i) => (
             <line
               key={`v-${i}`}
-              x1={i * 10}
+              x1={i * 20}
               y1="0"
-              x2={i * 10}
+              x2={i * 20}
               y2="100"
               stroke="currentColor"
-              strokeWidth="0.5"
+              strokeWidth="0.3"
               className={iconColors[service.color]}
             />
           ))}
-          {/* Horizontal lines */}
-          {[...Array(10)].map((_, i) => (
+          {[...Array(6)].map((_, i) => (
             <line
               key={`h-${i}`}
               x1="0"
-              y1={i * 10}
+              y1={i * 20}
               x2="100"
-              y2={i * 10}
+              y2={i * 20}
               stroke="currentColor"
-              strokeWidth="0.5"
+              strokeWidth="0.3"
               className={iconColors[service.color]}
             />
           ))}
         </svg>
       </div>
 
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className={`
-              absolute w-1 h-1 rounded-full
-              ${service.color === 'cyan' ? 'bg-accent-cyan' : service.color === 'violet' ? 'bg-accent-violet' : 'bg-accent-magenta'}
-              animate-pulse
-            `}
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${20 + (i % 3) * 25}%`,
-              animationDelay: `${i * 0.2}s`,
-              opacity: 0.6,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Central icon */}
+      {/* Central icon - simplified */}
       <div className={`
         relative z-10
-        w-20 h-20 rounded-2xl
-        bg-base-dark/80 backdrop-blur-sm
+        w-16 h-16 rounded-xl
+        bg-base-dark/60
         border border-white/10
         flex items-center justify-center
         ${iconColors[service.color]}
-        group-hover:scale-110 transition-transform duration-300
+        group-hover:scale-105 transition-transform duration-200
       `}>
         {service.icon}
       </div>
-
-      {/* Orbital ring */}
-      <div className={`
-        absolute w-32 h-32 rounded-full
-        border border-dashed
-        ${service.color === 'cyan' ? 'border-accent-cyan/30' : service.color === 'violet' ? 'border-accent-violet/30' : 'border-accent-magenta/30'}
-        animate-spin
-      `} style={{ animationDuration: '20s' }} />
     </div>
   );
 };

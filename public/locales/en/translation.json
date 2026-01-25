@@ -17,111 +17,111 @@
   },
   "hero": {
     "title": {
-      "lead": "ARCHITECTING",
-      "highlight": "\"intelligence\""
+      "lead": "AI that works",
+      "highlight": "for your business"
     },
     "tagline": {
       "symbol": "→",
-      "text": "AI • Full-Stack • Data"
+      "text": "Chatbots • Document Processing • Custom Apps"
     },
-    "subtitle": "Crafting sophisticated AI systems and modern web applications with mathematical precision",
+    "subtitle": "We build AI assistants that speak Albanian, English, Italian & German. Apps that handle bookings, invoices, and customer support — so you don't have to.",
     "cta": {
       "primary": "Start a Project",
-      "secondary": "Explore Services"
+      "secondary": "See Our Work"
     }
   },
   "services": {
-    "badge": "What We Do",
+    "badge": "What We Build",
     "title": "Services",
-    "subtitle": "From multilingual AI assistants to document automation, we build intelligent solutions that help local businesses compete globally.",
+    "subtitle": "AI assistants, document processors, and apps built for businesses in Albania and the Balkans — with multilingual support from day one.",
     "items": {
       "ai": {
-        "title": "AI & Automation",
-        "description": "Intelligent assistants, document processing, and workflow automation that reduce manual work and improve customer experience.",
+        "title": "AI Assistants",
+        "description": "Chatbots that answer in Albanian, English, Italian, or German. Connected to WhatsApp, your website, or internal tools. They handle FAQs, bookings, and support tickets.",
         "features": [
-          "Multilingual Chatbots",
-          "Document AI",
-          "Smart Automation",
-          "RAG Systems"
+          "WhatsApp Bots",
+          "Website Chat",
+          "5+ Languages",
+          "24/7 Support"
         ]
       },
       "fullstack": {
         "title": "Web & Mobile Apps",
-        "description": "Modern applications with beautiful interfaces, built for performance on any device. From booking systems to dashboards.",
+        "description": "Booking systems, dashboards, and internal tools. Fast on any device. We use React and React Native — the same tech as Airbnb and Instagram.",
         "features": [
-          "React/Next.js",
-          "React Native",
-          "Real-time Features",
-          "API Development"
+          "Booking Systems",
+          "Admin Dashboards",
+          "Mobile Apps",
+          "Real-time Updates"
         ]
       },
       "enterprise": {
-        "title": "Data & Integration",
-        "description": "Connect your systems, automate reporting, and gain insights from your data. Built for compliance and scalability.",
+        "title": "Data & Automation",
+        "description": "Stop copying data between spreadsheets. We connect your systems, automate reports, and make sure you're compliant with EU regulations.",
         "features": [
-          "Data Pipelines",
-          "System Integration",
-          "Analytics Dashboards",
-          "EU Compliance"
+          "Invoice Processing",
+          "Report Automation",
+          "System Connectors",
+          "GDPR Compliance"
         ]
       }
     }
   },
   "aiLab": {
-    "badge": "Capabilities",
-    "title": "The AI Lab",
-    "subtitle": "Core AI capabilities we implement for clients — from multilingual assistants to intelligent document processing.",
+    "badge": "What AI Can Do",
+    "title": "AI in Action",
+    "subtitle": "Real examples of what we build. These aren't concepts — they're capabilities we've shipped for clients.",
     "demos": {
       "chatbot": {
-        "title": "Multilingual Assistants",
-        "description": "AI assistants that speak your customers' language — Albanian, English, Italian, German — with context awareness and smart handoffs.",
+        "title": "Multilingual Chat",
+        "description": "A guest asks about room availability in German. The bot checks your calendar, responds in German, and can hand off to your team if needed.",
         "tags": [
           "WhatsApp",
-          "RAG",
-          "Multilingual"
+          "5 Languages",
+          "Live Handoff"
         ]
       },
       "extraction": {
-        "title": "Intelligent Document Processing",
-        "description": "Extract data from invoices, forms, and certificates. Automate paperwork that used to take hours.",
+        "title": "Invoice Reading",
+        "description": "Upload a PDF invoice. The AI extracts vendor, amount, date, and line items. Exports to your accounting software or spreadsheet.",
         "tags": [
-          "OCR",
-          "PDF Processing",
-          "Validation"
+          "PDF → Data",
+          "Albanian Formats",
+          "Auto-Export"
         ]
       },
       "automation": {
-        "title": "Workflow Automation",
-        "description": "AI agents that handle repetitive tasks — booking confirmations, follow-ups, report generation, and more.",
+        "title": "Task Automation",
+        "description": "New booking? Auto-send confirmation. Guest checked out? Request a review. Late payment? Send a reminder. All without lifting a finger.",
         "tags": [
-          "Agents",
-          "Scheduling",
-          "Notifications"
+          "Auto-Emails",
+          "Reminders",
+          "Follow-ups"
         ]
       }
     },
     "chatbot": {
       "messages": {
-        "user": "Do you have available rooms?",
-        "aiProcessing": "Checking availability...",
-        "aiRevenue": "Yes! 2 standard rooms available."
+        "user": "Keni dhoma të lira?",
+        "aiProcessing": "Po kontrolloj...",
+        "aiRevenue": "Po! 2 dhoma standard."
       }
     },
     "extraction": {
       "json": {
-        "line1": "\"invoice\": {...},",
+        "line1": "\"vendor\": \"Vodafone\"",
         "line2": "\"total\": \"€1,250\""
       }
     },
     "cta": {
-      "prompt": "Want to see these in action?",
-      "button": "Request a Demo"
+      "prompt": "Have a similar problem?",
+      "button": "Let's Talk"
     }
   },
   "portfolio": {
     "badge": "Our Work",
     "title": "Portfolio",
-    "subtitle": "Real solutions for real businesses — from hospitality AI to agricultural traceability systems.",
+    "subtitle": "Projects we've built for hotels, retailers, farms, and real estate agencies across Albania and Europe.",
     "filters": {
       "all": "All",
       "ai": "AI",
@@ -132,71 +132,65 @@
     "viewAll": "View All Projects",
     "projects": {
       "hospitality-assistant": {
-        "title": "Hospitality AI Assistant",
-        "description": "Multilingual booking assistant for the tourism sector. Handles inquiries in 5 languages via WhatsApp, reducing response time and increasing direct bookings.",
+        "title": "Hotel Booking Bot",
+        "description": "WhatsApp bot for an Albanian hotel chain. Guests ask about rooms in Albanian, English, Italian, or German — the bot checks availability and books directly. Cut response time from hours to seconds.",
         "tags": [
-          "LangChain",
-          "WhatsApp API",
-          "RAG",
-          "FastAPI"
+          "WhatsApp",
+          "4 Languages",
+          "Direct Booking"
         ]
       },
       "ecommerce-assistant": {
-        "title": "E-Commerce AI Assistant",
-        "description": "Smart shopping assistant with visual product search. Upload a photo to find matching products, get personalized recommendations, and instant customer support.",
+        "title": "Visual Product Search",
+        "description": "Customer uploads a photo of a dress they like. The AI finds similar items in the store's catalog. Works on mobile, responds in under 2 seconds.",
         "tags": [
-          "GPT-4 Vision",
-          "Next.js",
-          "Vector Search",
-          "WebSockets"
+          "Image Search",
+          "Product Matching",
+          "Mobile-First"
         ]
       },
       "agri-traceability": {
-        "title": "Agricultural Traceability Platform",
-        "description": "Mobile-first supply chain tracking for food exporters. QR-based verification and EU compliance documentation for international markets.",
+        "title": "Farm-to-Export Tracker",
+        "description": "Mobile app for Albanian food exporters. Scan a QR code to see where produce came from, how it was processed, and its EU compliance certificates. Required for exports to Germany and Italy.",
         "tags": [
-          "React Native",
-          "FastAPI",
-          "PostgreSQL",
-          "AWS S3"
+          "QR Codes",
+          "EU Compliance",
+          "Supply Chain"
         ]
       },
       "document-processor": {
-        "title": "Invoice & Document Processor",
-        "description": "AI extraction pipeline for accounting workflows. Processes local invoice formats, categorizes expenses, and exports to accounting software.",
+        "title": "Invoice Processor",
+        "description": "Upload a stack of PDF invoices. The AI reads them — even handwritten Albanian ones — extracts the data, and exports to your accounting software. Saved 15+ hours per week for one client.",
         "tags": [
-          "GPT-4 Vision",
-          "Python",
-          "FastAPI",
-          "OCR"
+          "PDF Reading",
+          "Albanian OCR",
+          "Auto-Export"
         ]
       },
       "reputation-dashboard": {
-        "title": "Reputation Intelligence Dashboard",
-        "description": "Review aggregation and sentiment analysis for hospitality businesses. Monitors multiple platforms and generates AI-powered response suggestions.",
+        "title": "Review Dashboard",
+        "description": "One screen showing reviews from Booking.com, Google, TripAdvisor. See sentiment trends. Get AI-suggested responses. Built for a hotel group managing 12 properties.",
         "tags": [
-          "Next.js",
-          "OpenAI",
-          "PostgreSQL",
-          "Cron Jobs"
+          "Multi-Platform",
+          "Sentiment Analysis",
+          "Response Helper"
         ]
       },
       "property-matcher": {
-        "title": "Real Estate Matching Engine",
-        "description": "AI-powered property recommendation system for international buyers. Semantic search, investment analysis, and multilingual client qualification.",
+        "title": "Property Matcher",
+        "description": "Real estate site for international buyers. Describe what you want in plain English — 'sea view, under €200k, south Albania' — and the AI finds matching properties.",
         "tags": [
-          "React",
-          "pgvector",
-          "FastAPI",
-          "Embeddings"
+          "Natural Language",
+          "Property Search",
+          "Multilingual"
         ]
       }
     }
   },
   "contact": {
     "badge": "Get in Touch",
-    "title": "Let's Work Together",
-    "subtitle": "Have a project in mind? We'd love to hear about it. Send us a message and let's create something amazing together.",
+    "title": "Let's Talk",
+    "subtitle": "Tell us what you're trying to build. We'll get back to you within 24 hours.",
     "links": {
       "email": {
         "label": "Email",
@@ -214,7 +208,7 @@
     "form": {
       "success": {
         "title": "Message Sent!",
-        "body": "Thanks for reaching out. We'll get back to you soon.",
+        "body": "Thanks for reaching out. We'll reply within 24 hours.",
         "cta": "Send Another Message"
       },
       "labels": {
@@ -224,10 +218,10 @@
         "message": "Message *"
       },
       "placeholders": {
-        "name": "John Doe",
-        "email": "john@company.com",
+        "name": "Your name",
+        "email": "you@company.com",
         "company": "Your Company",
-        "message": "Tell us about your project..."
+        "message": "What are you trying to build or automate?"
       },
       "errors": {
         "name": "Name must be at least 2 characters",
@@ -239,11 +233,11 @@
     },
     "direct": {
       "title": "Direct Contact",
-      "subtitle": "Prefer to reach out directly? Choose your preferred method below."
+      "subtitle": "Prefer a quick chat? Pick your channel."
     },
     "availability": {
-      "title": "Available for new projects",
-      "subtitle": "Currently accepting projects starting from February 2025."
+      "title": "Taking on new projects",
+      "subtitle": "Currently booking for February 2026 onwards."
     }
   },
   "footer": {
@@ -251,8 +245,8 @@
     "location": {
       "prefix": "Based in",
       "country": "Albania",
-      "suffix": ", working globally.",
-      "secondary": "Crafting intelligent solutions across time zones."
+      "suffix": ", serving clients across Europe.",
+      "secondary": "We speak Albanian, English, Italian & German."
     },
     "social": {
       "github": "GitHub",
@@ -261,9 +255,9 @@
       "tiktok": "TikTok"
     },
     "madeWith": {
-      "prefix": "Designed & built with",
-      "highlight": "precision",
-      "suffix": "using React, Three.js & GSAP"
+      "prefix": "Built with",
+      "highlight": "React",
+      "suffix": ", Three.js & lots of coffee"
     }
   },
   "errors": {
