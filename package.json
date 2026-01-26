@@ -6,11 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "remotion:studio": "remotion studio",
+    "remotion:render:desktop": "remotion render HeroDemoDesktop --output=public/videos/hero-demo-desktop.mp4",
+    "remotion:render:mobile": "remotion render HeroDemoMobile --output=public/videos/hero-demo-mobile.mp4",
+    "remotion:render": "npm run remotion:render:desktop && npm run remotion:render:mobile"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
+    "@remotion/cli": "4.0.409",
+    "@remotion/player": "^4.0.409",
     "gsap": "^3.14.2",
     "i18next": "^25.8.0",
     "i18next-browser-languagedetector": "^8.2.0",
@@ -19,6 +25,7 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-i18next": "^16.5.3",
+    "remotion": "4.0.409",
     "resend": "^6.8.0",
     "three": "^0.182.0"
   },
